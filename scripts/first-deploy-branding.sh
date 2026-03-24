@@ -12,7 +12,7 @@ set -e
 
 # ─── Variables ──────────────────────────────────────────────
 APP_DIR="/var/www/okami_branding"
-REPO_URL="git@github.com:YOUR_GITHUB_USERNAME/okami_website.git"  # ← CHANGE THIS
+REPO_URL="https://github.com/AshDest/okami_website.git"  # ← CHANGE THIS
 BRANCH="branding"
 DOMAIN="okamisarl.org"
 NGINX_CONF="nginx-okami-branding.conf"
