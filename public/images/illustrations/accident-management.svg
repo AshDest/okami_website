@@ -1,59 +1,93 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" fill="none">
-  <rect width="500" height="400" rx="20" fill="#eef2ff"/>
-  <!-- Warning triangle background -->
-  <path d="M250 50 L420 330 L80 330 Z" fill="#fef3c7" opacity="0.5"/>
-  <path d="M250 80 L390 310 L110 310 Z" fill="none" stroke="#f59e0b" stroke-width="3"/>
-  <!-- Exclamation mark -->
-  <rect x="244" y="140" width="12" height="80" rx="6" fill="#f59e0b"/>
-  <circle cx="250" cy="245" r="8" fill="#f59e0b"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450">
+  <defs>
+    <linearGradient id="bg8" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#eef2ff"/><stop offset="100%" stop-color="#fef2f2"/></linearGradient>
+    <linearGradient id="skin8" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#A0663C"/><stop offset="100%" stop-color="#8B4513"/></linearGradient>
+  </defs>
+  <rect width="600" height="450" rx="24" fill="url(#bg8)"/>
+  <circle cx="500" cy="50" r="55" fill="#fecaca" opacity="0.2"/>
+
+  <!-- Warning triangle -->
+  <g transform="translate(300, 30)">
+    <path d="M0 0 L150 260 L-150 260Z" fill="#fef3c7" opacity="0.4"/>
+    <path d="M0 20 L130 245 L-130 245Z" fill="none" stroke="#f59e0b" stroke-width="3.5"/>
+    <!-- Exclamation -->
+    <rect x="-7" y="80" width="14" height="90" rx="7" fill="#f59e0b"/>
+    <circle cy="195" r="10" fill="#f59e0b"/>
+  </g>
+
   <!-- Damaged tricycle -->
-  <rect x="160" y="260" width="100" height="40" rx="6" fill="#6366f1" opacity="0.6"/>
-  <rect x="170" y="265" width="40" height="28" rx="4" fill="#818cf8"/>
-  <!-- Dents / damage marks -->
-  <path d="M230 265 L240 275 L235 268 L245 278" stroke="#ef4444" stroke-width="2"/>
-  <circle cx="245" cy="270" r="8" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="3 2"/>
-  <!-- Wheels -->
-  <circle cx="190" cy="305" r="15" fill="#1e293b"/>
-  <circle cx="240" cy="305" r="15" fill="#1e293b"/>
-  <!-- Process arrows -->
-  <rect x="50" y="70" width="105" height="35" rx="8" fill="#ef4444"/>
-  <text x="102" y="92" text-anchor="middle" font-size="9" fill="#fff" font-family="Arial" font-weight="bold">1. Déclaration</text>
-  <rect x="50" y="120" width="105" height="35" rx="8" fill="#f59e0b"/>
-  <text x="102" y="142" text-anchor="middle" font-size="9" fill="#fff" font-family="Arial" font-weight="bold">2. Évaluation</text>
-  <rect x="50" y="170" width="105" height="35" rx="8" fill="#4f46e5"/>
-  <text x="102" y="192" text-anchor="middle" font-size="9" fill="#fff" font-family="Arial" font-weight="bold">3. Devis garage</text>
-  <rect x="50" y="220" width="105" height="35" rx="8" fill="#22c55e"/>
-  <text x="102" y="242" text-anchor="middle" font-size="9" fill="#fff" font-family="Arial" font-weight="bold">4. Réparation</text>
+  <g transform="translate(230, 280)">
+    <rect width="120" height="50" rx="8" fill="#6366f1" opacity="0.55"/>
+    <rect x="10" y="6" width="50" height="34" rx="5" fill="#818cf8" opacity="0.6"/>
+    <!-- Damage marks -->
+    <path d="M85 8 L95 22 L88 14 L100 28" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="100" cy="15" r="12" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="5 3"/>
+    <!-- Wheels -->
+    <circle cx="35" cy="55" r="18" fill="#1e293b"/><circle cx="35" cy="55" r="10" fill="#475569"/>
+    <circle cx="95" cy="55" r="18" fill="#1e293b"/><circle cx="95" cy="55" r="10" fill="#475569"/>
+  </g>
+
+  <!-- Process steps -->
+  <g transform="translate(45, 55)">
+    <rect width="130" height="42" rx="10" fill="#ef4444"/>
+    <text x="65" y="27" text-anchor="middle" font-size="12" font-weight="700" fill="#fff" font-family="sans-serif">1. Declaration</text>
+  </g>
+  <g transform="translate(45, 110)">
+    <rect width="130" height="42" rx="10" fill="#f59e0b"/>
+    <text x="65" y="27" text-anchor="middle" font-size="12" font-weight="700" fill="#fff" font-family="sans-serif">2. Evaluation</text>
+  </g>
+  <g transform="translate(45, 165)">
+    <rect width="130" height="42" rx="10" fill="#4f46e5"/>
+    <text x="65" y="27" text-anchor="middle" font-size="12" font-weight="700" fill="#fff" font-family="sans-serif">3. Devis garage</text>
+  </g>
+  <g transform="translate(45, 220)">
+    <rect width="130" height="42" rx="10" fill="#22c55e"/>
+    <text x="65" y="27" text-anchor="middle" font-size="12" font-weight="700" fill="#fff" font-family="sans-serif">4. Reparation</text>
+  </g>
+
   <!-- Arrows between steps -->
-  <path d="M102 105 L102 120" stroke="#94a3b8" stroke-width="2"/>
-  <polygon points="98,118 102,125 106,118" fill="#94a3b8"/>
-  <path d="M102 155 L102 170" stroke="#94a3b8" stroke-width="2"/>
-  <polygon points="98,168 102,175 106,168" fill="#94a3b8"/>
-  <path d="M102 205 L102 220" stroke="#94a3b8" stroke-width="2"/>
-  <polygon points="98,218 102,225 106,218" fill="#94a3b8"/>
-  <!-- Person inspecting (Black) -->
-  <circle cx="380" cy="180" r="22" fill="#6B3F2A"/>
-  <path d="M380 160 Q365 156 367 178" stroke="#3D2314" stroke-width="3" fill="none"/>
-  <path d="M380 160 Q395 156 393 178" stroke="#3D2314" stroke-width="3" fill="none"/>
-  <ellipse cx="374" cy="178" rx="2" ry="2.5" fill="#1e293b"/>
-  <ellipse cx="386" cy="178" rx="2" ry="2.5" fill="#1e293b"/>
-  <path d="M376 188 Q380 192 384 188" stroke="#1e293b" stroke-width="1.5" fill="none"/>
-  <!-- Body -->
-  <rect x="364" y="202" width="32" height="48" rx="8" fill="#ef4444"/>
-  <!-- Arms with clipboard -->
-  <path d="M364 215 Q345 220 340 230" stroke="#6B3F2A" stroke-width="7" stroke-linecap="round" fill="none"/>
-  <path d="M396 215 Q410 225 415 240" stroke="#6B3F2A" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <path d="M110 97 L110 110" stroke="#94a3b8" stroke-width="3"/><polygon points="105,108 110,116 115,108" fill="#94a3b8"/>
+  <path d="M110 152 L110 165" stroke="#94a3b8" stroke-width="3"/><polygon points="105,163 110,171 115,163" fill="#94a3b8"/>
+  <path d="M110 207 L110 220" stroke="#94a3b8" stroke-width="3"/><polygon points="105,218 110,226 115,218" fill="#94a3b8"/>
+
+  <!-- Inspector person (Black) -->
+  <g transform="translate(490, 165)">
+    <circle cx="0" cy="0" r="30" fill="url(#skin8)"/>
+    <path d="M-25 -11 Q-16 -38 0 -40 Q16 -38 25 -11" fill="#2C1006"/>
+    <ellipse cx="-10" cy="0" rx="4" ry="4.5" fill="#1e293b"/>
+    <ellipse cx="10" cy="0" rx="4" ry="4.5" fill="#1e293b"/>
+    <circle cx="-9" cy="-1.5" r="1.6" fill="#fff"/>
+    <circle cx="11" cy="-1.5" r="1.6" fill="#fff"/>
+    <path d="M-7 14 Q0 20 7 14" stroke="#2C1006" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Body -->
+    <rect x="-22" y="32" width="44" height="60" rx="10" fill="#ef4444"/>
+    <!-- Arms with clipboard -->
+    <path d="M-22 45 Q-48 50 -52 70" stroke="url(#skin8)" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <path d="M22 45 Q44 58 42 80" stroke="url(#skin8)" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <!-- Legs -->
+    <rect x="-14" y="90" width="11" height="45" rx="5" fill="#1e293b"/>
+    <rect x="3" y="90" width="11" height="45" rx="5" fill="#1e293b"/>
+  </g>
+
   <!-- Clipboard in hand -->
-  <rect x="325" y="225" width="30" height="38" rx="3" fill="#fff" stroke="#1e293b" stroke-width="1.5"/>
-  <rect x="330" y="235" width="20" height="3" rx="1" fill="#94a3b8"/>
-  <rect x="330" y="242" width="15" height="3" rx="1" fill="#94a3b8"/>
-  <rect x="330" y="249" width="18" height="3" rx="1" fill="#94a3b8"/>
+  <g transform="translate(420, 220)">
+    <rect width="42" height="55" rx="5" fill="#fff" stroke="#1e293b" stroke-width="2"/>
+    <rect x="6" y="10" width="30" height="5" rx="2.5" fill="#94a3b8"/>
+    <rect x="6" y="20" width="22" height="5" rx="2.5" fill="#94a3b8"/>
+    <rect x="6" y="30" width="26" height="5" rx="2.5" fill="#94a3b8"/>
+    <rect x="6" y="40" width="18" height="5" rx="2.5" fill="#94a3b8"/>
+  </g>
+
   <!-- Comparison chart -->
-  <rect x="370" y="300" width="100" height="55" rx="6" fill="#fff" stroke="#4f46e5" stroke-width="1.5"/>
-  <text x="420" y="315" text-anchor="middle" font-size="7" fill="#64748b" font-family="Arial">Estimé vs Réel</text>
-  <rect x="385" y="325" width="15" height="20" rx="2" fill="#4f46e5"/>
-  <rect x="405" y="320" width="15" height="25" rx="2" fill="#22c55e"/>
-  <rect x="425" y="330" width="15" height="15" rx="2" fill="#f59e0b"/>
-  <rect x="445" y="328" width="15" height="17" rx="2" fill="#ef4444"/>
+  <g transform="translate(410, 350)">
+    <rect width="150" height="75" rx="10" fill="#fff" stroke="#4f46e5" stroke-width="2"/>
+    <text x="75" y="20" text-anchor="middle" font-size="10" font-weight="600" fill="#64748b" font-family="sans-serif">Estime vs Reel</text>
+    <rect x="15" y="30" width="22" height="32" rx="4" fill="#4f46e5"/>
+    <rect x="43" y="25" width="22" height="37" rx="4" fill="#22c55e"/>
+    <rect x="71" y="35" width="22" height="27" rx="4" fill="#f59e0b"/>
+    <rect x="99" y="33" width="22" height="29" rx="4" fill="#ef4444"/>
+    <text x="26" y="76" text-anchor="middle" font-size="7" fill="#64748b" font-family="sans-serif">Est.</text>
+    <text x="54" y="76" text-anchor="middle" font-size="7" fill="#64748b" font-family="sans-serif">Reel</text>
+  </g>
 </svg>
 

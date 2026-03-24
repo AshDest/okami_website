@@ -1,42 +1,76 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" fill="none">
-  <rect width="500" height="400" rx="20" fill="#eef2ff"/>
-  <!-- Money bag -->
-  <ellipse cx="250" cy="260" rx="80" ry="90" fill="#f59e0b"/>
-  <ellipse cx="250" cy="260" rx="80" ry="90" fill="#fbbf24" opacity="0.5"/>
-  <path d="M220 180 Q250 150 280 180" stroke="#d97706" stroke-width="4" fill="none"/>
-  <text x="250" y="275" text-anchor="middle" font-size="48" font-weight="bold" fill="#92400e" font-family="Arial">FC</text>
-  <!-- Coins -->
-  <ellipse cx="370" cy="300" rx="30" ry="10" fill="#d97706"/>
-  <rect x="340" y="285" width="60" height="15" rx="2" fill="#f59e0b"/>
-  <ellipse cx="370" cy="285" rx="30" ry="10" fill="#fbbf24"/>
-  <ellipse cx="370" cy="270" rx="30" ry="10" fill="#d97706"/>
-  <rect x="340" y="255" width="60" height="15" rx="2" fill="#f59e0b"/>
-  <ellipse cx="370" cy="255" rx="30" ry="10" fill="#fbbf24"/>
-  <!-- Person collecting (Black) -->
-  <circle cx="130" cy="150" r="28" fill="#6B3F2A"/>
-  <path d="M130 125 Q110 120 112 145" stroke="#3D2314" stroke-width="4" fill="none"/>
-  <path d="M130 125 Q150 120 148 145" stroke="#3D2314" stroke-width="4" fill="none"/>
-  <ellipse cx="122" cy="148" rx="3" ry="3" fill="#1e293b"/>
-  <ellipse cx="138" cy="148" rx="3" ry="3" fill="#1e293b"/>
-  <path d="M124 160 Q130 166 136 160" stroke="#1e293b" stroke-width="2" fill="none"/>
-  <!-- Body with vest -->
-  <rect x="110" y="178" width="40" height="55" rx="10" fill="#4f46e5"/>
-  <rect x="125" y="178" width="10" height="55" fill="#3730a3"/>
-  <!-- Arms reaching to money -->
-  <path d="M150 195 Q180 190 190 220" stroke="#6B3F2A" stroke-width="8" stroke-linecap="round" fill="none"/>
-  <path d="M110 195 Q90 210 95 240" stroke="#6B3F2A" stroke-width="8" stroke-linecap="round" fill="none"/>
-  <!-- Notebook -->
-  <rect x="80" y="240" width="35" height="45" rx="3" fill="#fff" stroke="#4f46e5" stroke-width="1.5"/>
-  <line x1="88" y1="252" x2="108" y2="252" stroke="#a5b4fc" stroke-width="2"/>
-  <line x1="88" y1="260" x2="105" y2="260" stroke="#a5b4fc" stroke-width="2"/>
-  <line x1="88" y1="268" x2="107" y2="268" stroke="#a5b4fc" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#eef2ff"/><stop offset="100%" stop-color="#fef3c7"/></linearGradient>
+    <linearGradient id="skin2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#A0663C"/><stop offset="100%" stop-color="#8B4513"/></linearGradient>
+  </defs>
+  <rect width="600" height="450" rx="24" fill="url(#bg2)"/>
+  <circle cx="500" cy="90" r="70" fill="#fde68a" opacity="0.25"/>
+  <circle cx="100" cy="380" r="60" fill="#c7d2fe" opacity="0.2"/>
+
+  <!-- Big money bag -->
+  <ellipse cx="370" cy="280" rx="100" ry="110" fill="#f59e0b"/>
+  <ellipse cx="370" cy="280" rx="100" ry="110" fill="#fbbf24" opacity="0.4"/>
+  <path d="M320 185 Q370 140 420 185" stroke="#b45309" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <text x="370" y="300" text-anchor="middle" font-size="56" font-weight="900" fill="#78350f" font-family="sans-serif">FC</text>
+
+  <!-- Coins stack -->
+  <g transform="translate(490, 250)">
+    <ellipse cx="0" cy="50" rx="35" ry="12" fill="#b45309"/>
+    <rect x="-35" y="32" width="70" height="18" fill="#f59e0b"/>
+    <ellipse cx="0" cy="32" rx="35" ry="12" fill="#fbbf24"/>
+    <ellipse cx="0" cy="16" rx="35" ry="12" fill="#b45309"/>
+    <rect x="-35" y="0" width="70" height="16" fill="#f59e0b"/>
+    <ellipse cx="0" cy="0" rx="35" ry="12" fill="#fbbf24"/>
+  </g>
+
+  <!-- Collector person (Black) -->
+  <g transform="translate(120, 80)">
+    <!-- Head -->
+    <circle cx="0" cy="0" r="38" fill="url(#skin2)"/>
+    <path d="M-32 -12 Q-20 -42 0 -45 Q20 -42 32 -12" fill="#2C1006"/>
+    <ellipse cx="-12" cy="0" rx="4.5" ry="5" fill="#1e293b"/>
+    <ellipse cx="12" cy="0" rx="4.5" ry="5" fill="#1e293b"/>
+    <circle cx="-11" cy="-1.5" r="1.8" fill="#fff"/>
+    <circle cx="13" cy="-1.5" r="1.8" fill="#fff"/>
+    <ellipse cx="0" cy="10" rx="6" ry="4" fill="#7A3B10" opacity="0.35"/>
+    <path d="M-10 20 Q0 30 10 20" stroke="#2C1006" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+    <!-- Body (indigo vest) -->
+    <rect x="-28" y="40" width="56" height="75" rx="14" fill="#4f46e5"/>
+    <rect x="-8" y="40" width="16" height="75" fill="#3730a3"/>
+    <!-- Arms -->
+    <path d="M28 55 Q65 50 80 85" stroke="url(#skin2)" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <path d="M-28 55 Q-55 70 -50 100" stroke="url(#skin2)" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <!-- Legs -->
+    <rect x="-18" y="112" width="14" height="50" rx="6" fill="#1e293b"/>
+    <rect x="4" y="112" width="14" height="50" rx="6" fill="#1e293b"/>
+  </g>
+
+  <!-- Notebook in hand -->
+  <g transform="translate(55, 185)">
+    <rect width="48" height="60" rx="5" fill="#fff" stroke="#4f46e5" stroke-width="2"/>
+    <rect x="8" y="12" width="32" height="5" rx="2.5" fill="#a5b4fc"/>
+    <rect x="8" y="22" width="25" height="5" rx="2.5" fill="#a5b4fc"/>
+    <rect x="8" y="32" width="28" height="5" rx="2.5" fill="#a5b4fc"/>
+    <rect x="8" y="42" width="20" height="5" rx="2.5" fill="#a5b4fc"/>
+  </g>
+
   <!-- Arrow flow -->
-  <path d="M200 250 Q250 220 300 250" stroke="#4f46e5" stroke-width="3" fill="none" stroke-dasharray="8 4"/>
-  <polygon points="300,245 310,250 300,255" fill="#4f46e5"/>
+  <path d="M230 280 Q290 230 340 270" stroke="#4f46e5" stroke-width="4" fill="none" stroke-dasharray="10 6"/>
+  <polygon points="335,262 348,270 335,278" fill="#4f46e5"/>
+
   <!-- Clock -->
-  <circle cx="400" cy="120" r="35" fill="#fff" stroke="#4f46e5" stroke-width="3"/>
-  <line x1="400" y1="120" x2="400" y2="100" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
-  <line x1="400" y1="120" x2="415" y2="125" stroke="#4f46e5" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="400" cy="120" r="3" fill="#4f46e5"/>
+  <g transform="translate(500, 85)">
+    <circle r="42" fill="#fff" stroke="#4f46e5" stroke-width="3.5"/>
+    <line x1="0" y1="0" x2="0" y2="-25" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="18" y2="8" stroke="#4f46e5" stroke-width="3" stroke-linecap="round"/>
+    <circle r="5" fill="#4f46e5"/>
+  </g>
+
+  <!-- 6 jours label -->
+  <g transform="translate(445, 370)">
+    <rect x="0" y="0" width="120" height="45" rx="12" fill="#4f46e5"/>
+    <text x="60" y="20" text-anchor="middle" font-size="13" font-weight="700" fill="#fff" font-family="sans-serif">6 jours</text>
+    <text x="60" y="36" text-anchor="middle" font-size="10" fill="#c7d2fe" font-family="sans-serif">/ semaine</text>
+  </g>
 </svg>
 

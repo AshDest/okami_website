@@ -1,51 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" fill="none">
-  <rect width="500" height="400" rx="20" fill="#eef2ff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#eef2ff"/><stop offset="100%" stop-color="#ede9fe"/></linearGradient>
+    <linearGradient id="skin4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#A0663C"/><stop offset="100%" stop-color="#8B4513"/></linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f8fafc"/><stop offset="100%" stop-color="#fff"/></linearGradient>
+  </defs>
+  <rect width="600" height="450" rx="24" fill="url(#bg4)"/>
+  <circle cx="530" cy="70" r="70" fill="#ddd6fe" opacity="0.25"/>
+
   <!-- Laptop -->
-  <rect x="120" y="100" width="260" height="170" rx="10" fill="#1e293b"/>
-  <rect x="130" y="110" width="240" height="145" rx="4" fill="#fff"/>
-  <!-- Screen - Dashboard -->
-  <rect x="140" y="120" width="80" height="12" rx="3" fill="#4f46e5"/>
-  <text x="180" y="130" text-anchor="middle" font-size="8" fill="#fff" font-family="Arial" font-weight="bold">Tricycle App</text>
-  <!-- Chart bars -->
-  <rect x="145" y="200" width="15" height="40" rx="2" fill="#4f46e5"/>
-  <rect x="165" y="185" width="15" height="55" rx="2" fill="#7c3aed"/>
-  <rect x="185" y="175" width="15" height="65" rx="2" fill="#4f46e5"/>
-  <rect x="205" y="165" width="15" height="75" rx="2" fill="#7c3aed"/>
-  <rect x="225" y="190" width="15" height="50" rx="2" fill="#4f46e5"/>
-  <!-- Stats cards on screen -->
-  <rect x="260" y="140" width="95" height="35" rx="5" fill="#eef2ff"/>
-  <text x="307" y="155" text-anchor="middle" font-size="7" fill="#64748b" font-family="Arial">Motos gérées</text>
-  <text x="307" y="168" text-anchor="middle" font-size="12" fill="#4f46e5" font-family="Arial" font-weight="bold">200+</text>
-  <rect x="260" y="180" width="95" height="35" rx="5" fill="#f0fdf4"/>
-  <text x="307" y="195" text-anchor="middle" font-size="7" fill="#64748b" font-family="Arial">Collecté aujourd'hui</text>
-  <text x="307" y="208" text-anchor="middle" font-size="10" fill="#22c55e" font-family="Arial" font-weight="bold">1.5M FC</text>
-  <rect x="260" y="220" width="95" height="28" rx="5" fill="#fefce8"/>
-  <text x="307" y="238" text-anchor="middle" font-size="8" fill="#d97706" font-family="Arial" font-weight="bold">⚡ Temps réel</text>
-  <!-- Laptop base -->
-  <path d="M100 270 L400 270 L420 290 L80 290 Z" fill="#334155"/>
-  <!-- Notification bell -->
-  <circle cx="420" cy="120" r="25" fill="#f59e0b" opacity="0.2"/>
-  <path d="M420 108 Q420 100 412 100 L428 100 Q420 100 420 108 L420 125 L408 132 L432 132 L420 125 Z" fill="#f59e0b"/>
-  <circle cx="420" cy="135" r="3" fill="#f59e0b"/>
-  <circle cx="432" cy="105" r="8" fill="#ef4444"/>
-  <text x="432" y="109" text-anchor="middle" font-size="9" fill="#fff" font-family="Arial" font-weight="bold">3</text>
+  <g transform="translate(130, 120)">
+    <!-- Screen frame -->
+    <rect width="340" height="210" rx="14" fill="#1e293b"/>
+    <rect x="10" y="10" width="320" height="185" rx="6" fill="url(#screen)"/>
+    <!-- Top bar -->
+    <rect x="20" y="20" width="100" height="16" rx="5" fill="#4f46e5"/>
+    <text x="70" y="32" text-anchor="middle" font-size="9" font-weight="700" fill="#fff" font-family="sans-serif">Tricycle App</text>
+    <circle cx="290" cy="28" r="5" fill="#22c55e"/><circle cx="305" cy="28" r="5" fill="#f59e0b"/><circle cx="320" cy="28" r="5" fill="#ef4444"/>
+    <!-- Chart bars -->
+    <rect x="25" y="145" width="22" height="40" rx="4" fill="#4f46e5"/>
+    <rect x="55" y="125" width="22" height="60" rx="4" fill="#7c3aed"/>
+    <rect x="85" y="110" width="22" height="75" rx="4" fill="#4f46e5"/>
+    <rect x="115" y="95" width="22" height="90" rx="4" fill="#7c3aed"/>
+    <rect x="145" y="120" width="22" height="65" rx="4" fill="#4f46e5"/>
+    <rect x="175" y="105" width="22" height="80" rx="4" fill="#22c55e"/>
+    <!-- Stats cards -->
+    <rect x="210" y="50" width="110" height="42" rx="8" fill="#eef2ff"/>
+    <text x="265" y="68" text-anchor="middle" font-size="8" fill="#64748b" font-family="sans-serif">Motos gerees</text>
+    <text x="265" y="84" text-anchor="middle" font-size="16" font-weight="800" fill="#4f46e5" font-family="sans-serif">200+</text>
+    <rect x="210" y="100" width="110" height="42" rx="8" fill="#f0fdf4"/>
+    <text x="265" y="118" text-anchor="middle" font-size="8" fill="#64748b" font-family="sans-serif">Collecte du jour</text>
+    <text x="265" y="134" text-anchor="middle" font-size="14" font-weight="800" fill="#22c55e" font-family="sans-serif">1,5M FC</text>
+    <rect x="210" y="150" width="110" height="35" rx="8" fill="#fef3c7"/>
+    <text x="265" y="172" text-anchor="middle" font-size="10" font-weight="700" fill="#b45309" font-family="sans-serif">Temps reel</text>
+    <!-- Laptop base -->
+    <path d="M-20 210 L360 210 L380 240 L-40 240Z" fill="#334155" />
+    <rect x="-40" y="238" width="420" height="6" rx="3" fill="#1e293b"/>
+  </g>
+
   <!-- Person using laptop (Black) -->
-  <circle cx="250" cy="55" r="25" fill="#6B3F2A"/>
-  <path d="M250 33 Q232 28 234 52" stroke="#3D2314" stroke-width="3" fill="none"/>
-  <path d="M250 33 Q268 28 266 52" stroke="#3D2314" stroke-width="3" fill="none"/>
-  <ellipse cx="243" cy="53" rx="2.5" ry="2.5" fill="#1e293b"/>
-  <ellipse cx="257" cy="53" rx="2.5" ry="2.5" fill="#1e293b"/>
-  <path d="M245 63 Q250 68 255 63" stroke="#1e293b" stroke-width="1.5" fill="none"/>
-  <!-- Shoulders -->
-  <rect x="234" y="80" width="32" height="20" rx="8" fill="#4f46e5"/>
+  <g transform="translate(300, 55)">
+    <circle cx="0" cy="0" r="32" fill="url(#skin4)"/>
+    <path d="M-27 -12 Q-16 -40 0 -42 Q16 -40 27 -12" fill="#2C1006"/>
+    <ellipse cx="-10" cy="0" rx="4" ry="4.5" fill="#1e293b"/>
+    <ellipse cx="10" cy="0" rx="4" ry="4.5" fill="#1e293b"/>
+    <circle cx="-9" cy="-1.5" r="1.6" fill="#fff"/>
+    <circle cx="11" cy="-1.5" r="1.6" fill="#fff"/>
+    <path d="M-8 15 Q0 22 8 15" stroke="#2C1006" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Shoulders -->
+    <rect x="-22" y="34" width="44" height="26" rx="12" fill="#4f46e5"/>
+  </g>
+
+  <!-- Notification bell -->
+  <g transform="translate(510, 110)">
+    <circle r="32" fill="#f59e0b" opacity="0.15"/>
+    <path d="M0-18 Q0-28-10-28 L10-28 Q0-28 0-18 L0 5 L-15 14 L15 14 L0 5Z" fill="#f59e0b"/>
+    <circle cy="17" r="4" fill="#f59e0b"/>
+    <!-- Badge -->
+    <circle cx="12" cy="-22" r="10" fill="#ef4444"/>
+    <text x="12" y="-18" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="sans-serif">3</text>
+  </g>
+
   <!-- WiFi signal -->
-  <path d="M65 130 Q65 100 95 100" stroke="#22c55e" stroke-width="2" fill="none"/>
-  <path d="M65 140 Q65 100 105 100" stroke="#22c55e" stroke-width="2" fill="none" opacity="0.6"/>
-  <path d="M65 150 Q65 100 115 100" stroke="#22c55e" stroke-width="2" fill="none" opacity="0.3"/>
-  <!-- Data flow particles -->
-  <circle cx="80" cy="320" r="4" fill="#4f46e5" opacity="0.5"/>
-  <circle cx="120" cy="340" r="3" fill="#7c3aed" opacity="0.4"/>
-  <circle cx="380" cy="320" r="5" fill="#f59e0b" opacity="0.5"/>
-  <circle cx="350" cy="350" r="3" fill="#22c55e" opacity="0.4"/>
+  <g transform="translate(60, 170)" stroke="#22c55e" fill="none" stroke-width="3" stroke-linecap="round">
+    <path d="M0 20 Q0 0 20 0" opacity="0.3"/>
+    <path d="M0 14 Q0 0 14 0" opacity="0.6"/>
+    <path d="M0 8 Q0 0 8 0"/>
+    <circle cx="0" cy="22" r="3" fill="#22c55e"/>
+  </g>
+
+  <!-- Data particles -->
+  <circle cx="90" cy="400" r="6" fill="#4f46e5" opacity="0.4"/>
+  <circle cx="130" cy="420" r="4" fill="#7c3aed" opacity="0.3"/>
+  <circle cx="480" cy="395" r="7" fill="#f59e0b" opacity="0.4"/>
+  <circle cx="520" cy="420" r="4" fill="#22c55e" opacity="0.3"/>
 </svg>
 
