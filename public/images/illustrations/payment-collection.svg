@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" fill="none">
+  <rect width="500" height="400" rx="20" fill="#eef2ff"/>
+  <!-- Money bag -->
+  <ellipse cx="250" cy="260" rx="80" ry="90" fill="#f59e0b"/>
+  <ellipse cx="250" cy="260" rx="80" ry="90" fill="#fbbf24" opacity="0.5"/>
+  <path d="M220 180 Q250 150 280 180" stroke="#d97706" stroke-width="4" fill="none"/>
+  <text x="250" y="275" text-anchor="middle" font-size="48" font-weight="bold" fill="#92400e" font-family="Arial">FC</text>
+  <!-- Coins -->
+  <ellipse cx="370" cy="300" rx="30" ry="10" fill="#d97706"/>
+  <rect x="340" y="285" width="60" height="15" rx="2" fill="#f59e0b"/>
+  <ellipse cx="370" cy="285" rx="30" ry="10" fill="#fbbf24"/>
+  <ellipse cx="370" cy="270" rx="30" ry="10" fill="#d97706"/>
+  <rect x="340" y="255" width="60" height="15" rx="2" fill="#f59e0b"/>
+  <ellipse cx="370" cy="255" rx="30" ry="10" fill="#fbbf24"/>
+  <!-- Person collecting (Black) -->
+  <circle cx="130" cy="150" r="28" fill="#6B3F2A"/>
+  <path d="M130 125 Q110 120 112 145" stroke="#3D2314" stroke-width="4" fill="none"/>
+  <path d="M130 125 Q150 120 148 145" stroke="#3D2314" stroke-width="4" fill="none"/>
+  <ellipse cx="122" cy="148" rx="3" ry="3" fill="#1e293b"/>
+  <ellipse cx="138" cy="148" rx="3" ry="3" fill="#1e293b"/>
+  <path d="M124 160 Q130 166 136 160" stroke="#1e293b" stroke-width="2" fill="none"/>
+  <!-- Body with vest -->
+  <rect x="110" y="178" width="40" height="55" rx="10" fill="#4f46e5"/>
+  <rect x="125" y="178" width="10" height="55" fill="#3730a3"/>
+  <!-- Arms reaching to money -->
+  <path d="M150 195 Q180 190 190 220" stroke="#6B3F2A" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M110 195 Q90 210 95 240" stroke="#6B3F2A" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <!-- Notebook -->
+  <rect x="80" y="240" width="35" height="45" rx="3" fill="#fff" stroke="#4f46e5" stroke-width="1.5"/>
+  <line x1="88" y1="252" x2="108" y2="252" stroke="#a5b4fc" stroke-width="2"/>
+  <line x1="88" y1="260" x2="105" y2="260" stroke="#a5b4fc" stroke-width="2"/>
+  <line x1="88" y1="268" x2="107" y2="268" stroke="#a5b4fc" stroke-width="2"/>
+  <!-- Arrow flow -->
+  <path d="M200 250 Q250 220 300 250" stroke="#4f46e5" stroke-width="3" fill="none" stroke-dasharray="8 4"/>
+  <polygon points="300,245 310,250 300,255" fill="#4f46e5"/>
+  <!-- Clock -->
+  <circle cx="400" cy="120" r="35" fill="#fff" stroke="#4f46e5" stroke-width="3"/>
+  <line x1="400" y1="120" x2="400" y2="100" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+  <line x1="400" y1="120" x2="415" y2="125" stroke="#4f46e5" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="400" cy="120" r="3" fill="#4f46e5"/>
+</svg>
+

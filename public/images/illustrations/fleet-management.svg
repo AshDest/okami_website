@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" fill="none">
+  <!-- Background -->
+  <rect width="500" height="400" rx="20" fill="#eef2ff"/>
+  <!-- Road -->
+  <rect x="50" y="280" width="400" height="40" rx="5" fill="#94a3b8"/>
+  <rect x="130" y="296" width="40" height="8" rx="2" fill="#fff"/>
+  <rect x="230" y="296" width="40" height="8" rx="2" fill="#fff"/>
+  <rect x="330" y="296" width="40" height="8" rx="2" fill="#fff"/>
+  <!-- Tricycle Body -->
+  <rect x="160" y="190" width="180" height="80" rx="12" fill="#4f46e5"/>
+  <rect x="170" y="200" width="100" height="60" rx="8" fill="#6366f1"/>
+  <!-- Tricycle Cabin -->
+  <path d="M280 190 L340 190 L340 270 L280 270 Z" fill="#3730a3"/>
+  <rect x="290" y="205" width="35" height="35" rx="5" fill="#a5b4fc" opacity="0.6"/>
+  <!-- Wheels -->
+  <circle cx="200" cy="280" r="30" fill="#1e293b"/>
+  <circle cx="200" cy="280" r="15" fill="#64748b"/>
+  <circle cx="200" cy="280" r="5" fill="#1e293b"/>
+  <circle cx="320" cy="280" r="30" fill="#1e293b"/>
+  <circle cx="320" cy="280" r="15" fill="#64748b"/>
+  <circle cx="320" cy="280" r="5" fill="#1e293b"/>
+  <!-- Driver (Black person) -->
+  <circle cx="310" cy="165" r="22" fill="#8B5E3C"/>
+  <circle cx="310" cy="165" r="22" fill="#6B3F2A"/>
+  <path d="M310 145 Q295 140 295 155" stroke="#3D2314" stroke-width="3" fill="none"/>
+  <path d="M310 145 Q325 140 325 155" stroke="#3D2314" stroke-width="3" fill="none"/>
+  <ellipse cx="303" cy="163" rx="2" ry="2.5" fill="#1e293b"/>
+  <ellipse cx="317" cy="163" rx="2" ry="2.5" fill="#1e293b"/>
+  <path d="M305 172 Q310 177 315 172" stroke="#1e293b" stroke-width="1.5" fill="none"/>
+  <!-- Driver body -->
+  <rect x="296" y="187" width="28" height="35" rx="8" fill="#f59e0b"/>
+  <rect x="292" y="187" width="8" height="25" rx="4" fill="#f59e0b"/>
+  <rect x="328" y="187" width="8" height="25" rx="4" fill="#f59e0b"/>
+  <!-- Clipboard / Document -->
+  <rect x="90" y="120" width="55" height="70" rx="5" fill="#fff" stroke="#4f46e5" stroke-width="2"/>
+  <rect x="100" y="135" width="35" height="4" rx="2" fill="#4f46e5"/>
+  <rect x="100" y="145" width="28" height="4" rx="2" fill="#a5b4fc"/>
+  <rect x="100" y="155" width="32" height="4" rx="2" fill="#a5b4fc"/>
+  <rect x="100" y="165" width="20" height="4" rx="2" fill="#a5b4fc"/>
+  <!-- Checkmark -->
+  <circle cx="117" cy="125" r="8" fill="#22c55e"/>
+  <path d="M112 125 L115 128 L122 121" stroke="#fff" stroke-width="2" fill="none"/>
+  <!-- Stars / Quality markers -->
+  <polygon points="400,100 404,112 417,112 407,120 410,132 400,125 390,132 393,120 383,112 396,112" fill="#f59e0b"/>
+  <polygon points="420,140 423,148 432,148 425,153 427,161 420,156 413,161 415,153 408,148 417,148" fill="#f59e0b" opacity="0.6"/>
+</svg>
+

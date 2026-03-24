@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" fill="none">
+  <rect width="500" height="400" rx="20" fill="#eef2ff"/>
+  <!-- Phone / Mobile Money -->
+  <rect x="190" y="60" width="120" height="220" rx="16" fill="#1e293b"/>
+  <rect x="198" y="80" width="104" height="180" rx="4" fill="#fff"/>
+  <rect x="230" y="66" width="40" height="6" rx="3" fill="#334155"/>
+  <!-- Screen Content -->
+  <rect x="208" y="95" width="84" height="20" rx="4" fill="#4f46e5"/>
+  <text x="250" y="110" text-anchor="middle" font-size="10" fill="#fff" font-family="Arial" font-weight="bold">PAIEMENT</text>
+  <rect x="208" y="125" width="84" height="35" rx="5" fill="#eef2ff"/>
+  <text x="250" y="140" text-anchor="middle" font-size="8" fill="#64748b" font-family="Arial">Montant</text>
+  <text x="250" y="155" text-anchor="middle" font-size="14" fill="#4f46e5" font-family="Arial" font-weight="bold">50 000 FC</text>
+  <!-- M-Pesa / Mobile Money logos -->
+  <rect x="208" y="170" width="38" height="22" rx="4" fill="#e21b1b"/>
+  <text x="227" y="185" text-anchor="middle" font-size="7" fill="#fff" font-family="Arial" font-weight="bold">M-Pesa</text>
+  <rect x="254" y="170" width="38" height="22" rx="4" fill="#ff6600"/>
+  <text x="273" y="185" text-anchor="middle" font-size="7" fill="#fff" font-family="Arial" font-weight="bold">Orange</text>
+  <rect x="208" y="198" width="38" height="22" rx="4" fill="#e4002b"/>
+  <text x="227" y="213" text-anchor="middle" font-size="7" fill="#fff" font-family="Arial" font-weight="bold">Airtel</text>
+  <!-- Checkmark on phone -->
+  <circle cx="273" cy="209" r="11" fill="#22c55e"/>
+  <path d="M268 209 L271 212 L278 205" stroke="#fff" stroke-width="2" fill="none"/>
+  <!-- PDF Report -->
+  <rect x="360" y="140" width="80" height="100" rx="5" fill="#fff" stroke="#ef4444" stroke-width="2"/>
+  <rect x="360" y="140" width="80" height="25" rx="5" fill="#ef4444"/>
+  <text x="400" y="157" text-anchor="middle" font-size="11" fill="#fff" font-family="Arial" font-weight="bold">PDF</text>
+  <rect x="370" y="175" width="60" height="4" rx="2" fill="#fca5a5"/>
+  <rect x="370" y="185" width="50" height="4" rx="2" fill="#fca5a5"/>
+  <rect x="370" y="195" width="55" height="4" rx="2" fill="#fca5a5"/>
+  <rect x="370" y="210" width="40" height="12" rx="3" fill="#22c55e"/>
+  <text x="390" y="220" text-anchor="middle" font-size="7" fill="#fff" font-family="Arial">Payé</text>
+  <!-- Person receiving (Black, happy) -->
+  <circle cx="90" cy="150" r="30" fill="#6B3F2A"/>
+  <path d="M90 123 Q68 117 70 148" stroke="#3D2314" stroke-width="4" fill="none"/>
+  <path d="M90 123 Q112 117 110 148" stroke="#3D2314" stroke-width="4" fill="none"/>
+  <ellipse cx="81" cy="148" rx="3" ry="3" fill="#1e293b"/>
+  <ellipse cx="99" cy="148" rx="3" ry="3" fill="#1e293b"/>
+  <path d="M80 162 Q90 172 100 162" stroke="#1e293b" stroke-width="2" fill="none"/>
+  <!-- Body -->
+  <rect x="70" y="180" width="40" height="60" rx="10" fill="#7c3aed"/>
+  <!-- Arms celebrating -->
+  <path d="M70 195 Q45 170 50 150" stroke="#6B3F2A" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M110 195 Q135 170 130 150" stroke="#6B3F2A" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <!-- Arrow from phone to person -->
+  <path d="M190 180 Q140 180 120 180" stroke="#22c55e" stroke-width="3" fill="none" stroke-dasharray="8 4"/>
+  <polygon points="120,175 110,180 120,185" fill="#22c55e"/>
+  <!-- Money flying -->
+  <rect x="145" y="130" width="25" height="15" rx="2" fill="#22c55e" transform="rotate(-15 157 137)"/>
+  <text x="157" y="141" text-anchor="middle" font-size="8" fill="#fff" font-family="Arial" transform="rotate(-15 157 137)">FC</text>
+  <rect x="155" y="100" width="25" height="15" rx="2" fill="#22c55e" transform="rotate(10 167 107)"/>
+  <text x="167" y="111" text-anchor="middle" font-size="8" fill="#fff" font-family="Arial" transform="rotate(10 167 107)">FC</text>
+</svg>
+

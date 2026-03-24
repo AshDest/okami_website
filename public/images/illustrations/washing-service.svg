@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" fill="none">
+  <rect width="500" height="400" rx="20" fill="#eef2ff"/>
+  <!-- Water splash background -->
+  <ellipse cx="250" cy="300" rx="180" ry="40" fill="#bfdbfe" opacity="0.5"/>
+  <!-- Tricycle being washed -->
+  <rect x="170" y="180" width="160" height="70" rx="10" fill="#4f46e5" opacity="0.8"/>
+  <rect x="180" y="190" width="80" height="50" rx="6" fill="#6366f1"/>
+  <!-- Wheels -->
+  <circle cx="210" cy="260" r="25" fill="#1e293b"/>
+  <circle cx="210" cy="260" r="12" fill="#475569"/>
+  <circle cx="300" cy="260" r="25" fill="#1e293b"/>
+  <circle cx="300" cy="260" r="12" fill="#475569"/>
+  <!-- Water drops -->
+  <ellipse cx="180" cy="150" rx="5" ry="8" fill="#60a5fa" opacity="0.7"/>
+  <ellipse cx="220" cy="130" rx="4" ry="7" fill="#60a5fa" opacity="0.5"/>
+  <ellipse cx="260" cy="140" rx="5" ry="8" fill="#60a5fa" opacity="0.7"/>
+  <ellipse cx="300" cy="125" rx="4" ry="7" fill="#60a5fa" opacity="0.5"/>
+  <ellipse cx="340" cy="145" rx="5" ry="8" fill="#60a5fa" opacity="0.6"/>
+  <!-- Soap bubbles -->
+  <circle cx="150" cy="190" r="12" fill="none" stroke="#93c5fd" stroke-width="2" opacity="0.7"/>
+  <circle cx="360" cy="170" r="15" fill="none" stroke="#93c5fd" stroke-width="2" opacity="0.6"/>
+  <circle cx="380" cy="200" r="8" fill="none" stroke="#93c5fd" stroke-width="2" opacity="0.5"/>
+  <circle cx="140" cy="220" r="10" fill="none" stroke="#93c5fd" stroke-width="2" opacity="0.5"/>
+  <!-- Sparkle effects -->
+  <polygon points="130,100 133,110 143,110 135,116 138,126 130,120 122,126 125,116 117,110 127,110" fill="#f59e0b"/>
+  <polygon points="380,90 382,97 389,97 384,102 386,109 380,105 374,109 376,102 371,97 378,97" fill="#f59e0b" opacity="0.7"/>
+  <polygon points="420,150 422,155 427,155 423,158 425,163 420,160 415,163 417,158 413,155 418,155" fill="#f59e0b" opacity="0.5"/>
+  <!-- Person washing (Black) -->
+  <circle cx="100" cy="180" r="22" fill="#6B3F2A"/>
+  <path d="M100 160 Q86 156 88 178" stroke="#3D2314" stroke-width="3" fill="none"/>
+  <path d="M100 160 Q114 156 112 178" stroke="#3D2314" stroke-width="3" fill="none"/>
+  <ellipse cx="94" cy="178" rx="2" ry="2.5" fill="#1e293b"/>
+  <ellipse cx="106" cy="178" rx="2" ry="2.5" fill="#1e293b"/>
+  <path d="M96 188 Q100 193 104 188" stroke="#1e293b" stroke-width="1.5" fill="none"/>
+  <!-- Body with apron -->
+  <rect x="84" y="202" width="32" height="50" rx="8" fill="#22c55e"/>
+  <rect x="92" y="202" width="16" height="50" fill="#16a34a"/>
+  <!-- Arm holding hose -->
+  <path d="M116 215 Q140 200 160 170" stroke="#6B3F2A" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <!-- Hose -->
+  <path d="M160 170 Q165 160 170 155" stroke="#475569" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- Water spray from hose -->
+  <path d="M170 155 Q200 130 230 150" stroke="#60a5fa" stroke-width="2" fill="none"/>
+  <path d="M170 155 Q210 120 250 140" stroke="#60a5fa" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M170 155 Q190 140 220 155" stroke="#60a5fa" stroke-width="2" fill="none" opacity="0.8"/>
+  <!-- Revenue split indicator -->
+  <rect x="350" y="300" width="120" height="50" rx="8" fill="#fff" stroke="#4f46e5" stroke-width="1.5"/>
+  <rect x="360" y="310" width="24" height="12" rx="3" fill="#4f46e5"/>
+  <text x="372" y="320" text-anchor="middle" font-size="7" fill="#fff" font-family="Arial">20%</text>
+  <rect x="390" y="310" width="24" height="12" rx="3" fill="#22c55e"/>
+  <text x="402" y="320" text-anchor="middle" font-size="7" fill="#fff" font-family="Arial">80%</text>
+  <text x="410" y="340" text-anchor="middle" font-size="7" fill="#64748b" font-family="Arial">Partage revenus</text>
+</svg>
+
