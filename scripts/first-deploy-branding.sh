@@ -29,6 +29,18 @@ echo -e "${GREEN}  🚀 OKAMI Branding — First Deployment      ${NC}"
 echo -e "${GREEN}============================================${NC}"
 echo ""
 
+# ─── Step 0: Configure passwordless sudo for deploy ─────────
+echo -e "${YELLOW}🔐 Step 0: Configuring passwordless sudo for deploy user...${NC}"
+if [ -f /etc/sudoers.d/deploy-okami ]; then
+    echo "✅ Sudoers file already exists"
+else
+    echo "deploy ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/deploy-okami > /dev/null
+    sudo chmod 440 /etc/sudoers.d/deploy-okami
+    sudo visudo -cf /etc/sudoers.d/deploy-okami
+    echo "✅ Sudoers configured — deploy user can now sudo without password"
+fi
+echo ""
+
 # ─── Step 1: Create project directory ───────────────────────
 echo -e "${YELLOW}📂 Step 1: Creating project directory...${NC}"
 if [ -d "$APP_DIR" ]; then

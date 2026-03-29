@@ -1,20 +1,11 @@
 # Sudoers configuration for deploy user — OKAMI Branding
 # Copy this file to /etc/sudoers.d/deploy-okami on the VPS
 #
-# Usage: sudo cp scripts/sudoers-deploy /etc/sudoers.d/deploy-okami
-#        sudo chmod 440 /etc/sudoers.d/deploy-okami
-
-deploy ALL=(ALL) NOPASSWD: /usr/bin/chown -R www-data\:www-data /var/www/okami_branding/*
-deploy ALL=(ALL) NOPASSWD: /usr/bin/chmod -R 775 /var/www/okami_branding/*
-deploy ALL=(ALL) NOPASSWD: /bin/systemctl reload php8.2-fpm
-deploy ALL=(ALL) NOPASSWD: /bin/systemctl reload nginx
-deploy ALL=(ALL) NOPASSWD: /usr/bin/mkdir -p /var/www/okami_branding
-deploy ALL=(ALL) NOPASSWD: /usr/bin/chown deploy\:deploy /var/www/okami_branding
-deploy ALL=(ALL) NOPASSWD: /usr/bin/rm -rf /var/www/okami_branding
-deploy ALL=(ALL) NOPASSWD: /usr/sbin/nginx -t
-deploy ALL=(ALL) NOPASSWD: /usr/bin/cp /var/www/okami_branding/scripts/nginx-okami-branding.conf /etc/nginx/sites-available/okami-branding
-deploy ALL=(ALL) NOPASSWD: /usr/bin/ln -sf /etc/nginx/sites-available/okami-branding /etc/nginx/sites-enabled/okami-branding
-deploy ALL=(ALL) NOPASSWD: /usr/bin/certbot *
-deploy ALL=(ALL) NOPASSWD: /usr/bin/tee /etc/nginx/sites-available/okami-branding
-deploy ALL=(ALL) NOPASSWD: /usr/bin/bash -c *
+# Usage (as root):
+#   cp sudoers-deploy /etc/sudoers.d/deploy-okami
+#   chmod 440 /etc/sudoers.d/deploy-okami
+#   visudo -cf /etc/sudoers.d/deploy-okami   # validate syntax
+#
+# This gives the deploy user passwordless sudo for automated deployments.
+deploy ALL=(ALL) NOPASSWD: ALL
 
