@@ -49,12 +49,10 @@ jobs:
             git fetch origin branding
             git reset --hard origin/branding
 
-            # Setup .env if missing (fresh clone) — before composer so .env exists
-            NEEDS_KEY=false
+            # Setup .env if missing (fresh clone)
             if [ ! -f .env ]; then
               echo "⚙️ Creating .env from .env.example..."
               cp .env.example .env
-              NEEDS_KEY=true
             fi
 
             # Create SQLite database if missing
@@ -66,8 +64,8 @@ jobs:
             echo "📦 Installing Composer dependencies..."
             composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
 
-            # Generate app key after composer install (needs vendor/autoload.php)
-            if [ "$NEEDS_KEY" = true ]; then
+            # Generate app key if missing or empty
+            if ! grep -q "^APP_KEY=base64:" .env; then
               echo "🔑 Generating application key..."
               php artisan key:generate --force
             fi
@@ -95,8 +93,10 @@ jobs:
             echo "🔑 Fixing permissions..."
             sudo chown -R www-data:www-data /var/www/okami_branding/storage
             sudo chown -R www-data:www-data /var/www/okami_branding/bootstrap/cache
+            sudo chown -R www-data:www-data /var/www/okami_branding/database
             sudo chmod -R 775 /var/www/okami_branding/storage
             sudo chmod -R 775 /var/www/okami_branding/bootstrap/cache
+            sudo chmod -R 775 /var/www/okami_branding/database
 
             # Setup Nginx vhost if not configured yet
             if [ ! -f /etc/nginx/sites-available/okami-branding ]; then
