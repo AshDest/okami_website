@@ -41,11 +41,12 @@ jobs:
             git fetch origin branding
             git reset --hard origin/branding
 
-            # Setup .env if missing (fresh clone)
+            # Setup .env if missing (fresh clone) — before composer so .env exists
+            NEEDS_KEY=false
             if [ ! -f .env ]; then
               echo "⚙️ Creating .env from .env.example..."
               cp .env.example .env
-              php artisan key:generate --force
+              NEEDS_KEY=true
             fi
 
             # Create SQLite database if missing
@@ -56,6 +57,12 @@ jobs:
 
             echo "📦 Installing Composer dependencies..."
             composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
+
+            # Generate app key after composer install (needs vendor/autoload.php)
+            if [ "$NEEDS_KEY" = true ]; then
+              echo "🔑 Generating application key..."
+              php artisan key:generate --force
+            fi
 
             echo "📦 Installing Node.js dependencies..."
             npm ci
