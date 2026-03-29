@@ -22,12 +22,37 @@ jobs:
           script: |
             set -e
 
-            echo "📂 Navigating to project directory..."
-            cd /var/www/okami_branding
+            APP_DIR="/var/www/okami_branding"
+            REPO_URL="https://github.com/AshDest/okami_website.git"
+            BRANCH="branding"
+
+            echo "📂 Checking project directory..."
+            if [ ! -d "$APP_DIR/.git" ]; then
+              echo "⚠️  Not a git repo. Re-cloning..."
+              sudo rm -rf "$APP_DIR"
+              sudo mkdir -p "$APP_DIR"
+              sudo chown deploy:deploy "$APP_DIR"
+              git clone -b "$BRANCH" "$REPO_URL" "$APP_DIR"
+            fi
+
+            cd "$APP_DIR"
 
             echo "📥 Pulling latest code from branding branch..."
             git fetch origin branding
             git reset --hard origin/branding
+
+            # Setup .env if missing (fresh clone)
+            if [ ! -f .env ]; then
+              echo "⚙️ Creating .env from .env.example..."
+              cp .env.example .env
+              php artisan key:generate --force
+            fi
+
+            # Create SQLite database if missing
+            if [ ! -f database/database.sqlite ]; then
+              echo "🗃️ Creating SQLite database..."
+              touch database/database.sqlite
+            fi
 
             echo "📦 Installing Composer dependencies..."
             composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
@@ -46,6 +71,11 @@ jobs:
 
             echo "🗃️ Running database migrations..."
             php artisan migrate --force
+
+            # Create storage link if missing
+            if [ ! -L public/storage ]; then
+              php artisan storage:link
+            fi
 
             echo "🔑 Fixing permissions..."
             sudo chown -R www-data:www-data /var/www/okami_branding/storage
