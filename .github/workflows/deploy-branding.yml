@@ -98,6 +98,14 @@ jobs:
             sudo chmod -R 775 /var/www/okami_branding/storage
             sudo chmod -R 775 /var/www/okami_branding/bootstrap/cache
 
+            # Setup Nginx vhost if not configured yet
+            if [ ! -f /etc/nginx/sites-available/okami-branding ]; then
+              echo "🌐 Setting up Nginx vhost..."
+              sudo cp /var/www/okami_branding/scripts/nginx-okami-branding.conf /etc/nginx/sites-available/okami-branding
+              sudo ln -sf /etc/nginx/sites-available/okami-branding /etc/nginx/sites-enabled/okami-branding
+              sudo nginx -t
+            fi
+
             echo "🔄 Reloading services..."
             sudo systemctl reload php8.2-fpm
             sudo systemctl reload nginx

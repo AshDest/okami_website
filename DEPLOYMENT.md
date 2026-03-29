@@ -96,24 +96,13 @@ ssh deploy@102.223.210.91
 ### 3.2 — Configurer les permissions sudo pour l'utilisateur deploy
 
 ```bash
-# Créer le fichier sudoers pour deploy
-sudo tee /etc/sudoers.d/deploy-okami << 'EOF'
-deploy ALL=(ALL) NOPASSWD: /usr/bin/chown -R www-data\:www-data /var/www/okami_branding/*
-deploy ALL=(ALL) NOPASSWD: /usr/bin/chmod -R 775 /var/www/okami_branding/*
-deploy ALL=(ALL) NOPASSWD: /bin/systemctl reload php8.2-fpm
-deploy ALL=(ALL) NOPASSWD: /bin/systemctl reload nginx
-deploy ALL=(ALL) NOPASSWD: /usr/sbin/nginx -t
-deploy ALL=(ALL) NOPASSWD: /usr/bin/certbot *
-deploy ALL=(ALL) NOPASSWD: /usr/bin/cp /var/www/okami_branding/scripts/* /etc/nginx/sites-available/*
-deploy ALL=(ALL) NOPASSWD: /usr/bin/ln -sf /etc/nginx/sites-available/* /etc/nginx/sites-enabled/*
-deploy ALL=(ALL) NOPASSWD: /usr/bin/mkdir -p /var/www/okami_branding
-deploy ALL=(ALL) NOPASSWD: /usr/bin/bash -c *
-deploy ALL=(ALL) NOPASSWD: /usr/bin/rm -rf /var/www/okami_branding
-deploy ALL=(ALL) NOPASSWD: /usr/bin/tee *
-EOF
-
+# Créer le fichier sudoers pour deploy (NOPASSWD complet pour déploiement automatisé)
+echo "deploy ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/deploy-okami
 sudo chmod 440 /etc/sudoers.d/deploy-okami
+sudo visudo -cf /etc/sudoers.d/deploy-okami   # Doit afficher "parsed OK"
 ```
+
+> **Note :** Le workflow installe automatiquement `php8.2-sqlite3` si absent sur le serveur.
 
 ### 3.3 — Configurer la clé SSH GitHub (si pas déjà fait)
 
