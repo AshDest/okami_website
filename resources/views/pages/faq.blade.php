@@ -45,7 +45,7 @@
                         <x-faq-item
                             id="gen4" parent="faqGeneral"
                             question="Comment puis-je contacter OKAMI ?"
-                            answer="Vous pouvez nous contacter de plusieurs manières : via le <a href='/contact'>formulaire de contact</a> de notre site web, par téléphone au +243 XXX XXX XXX, par email à contact@okamisarl.org, ou en visitant nos bureaux à Kinshasa. Nous sommes disponibles du lundi au samedi, de 07h00 à 18h00."
+                            answer="Vous pouvez nous contacter de plusieurs manières : via le <a href='/contact'>formulaire de contact</a> de notre site web, par téléphone au +243 829 177 344, par email à contact@okamisarl.org, ou en visitant nos bureaux à Kinshasa. Nous sommes disponibles du lundi au samedi, de 07h00 à 18h00."
                         />
                         <x-faq-item
                             id="gen5" parent="faqGeneral"
