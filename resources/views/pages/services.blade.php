@@ -32,6 +32,7 @@
                     <li>Enregistrement complet du véhicule (matricule, châssis, documents)</li>
                     <li>Contrats de gestion avec date de début et fin, renouvelables</li>
                     <li>Affectation de motards qualifiés et vérifiés</li>
+                    <li>Installation d'un traceur GPS dès l'enregistrement pour la sécurité du véhicule</li>
                     <li>Suivi de l'état du véhicule en temps réel</li>
                     <li>Gestion documentaire digitalisée</li>
                     <li>Historique complet de chaque véhicule</li>

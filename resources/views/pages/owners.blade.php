@@ -174,6 +174,12 @@
                         question="Comment devenir propriétaire partenaire ?"
                         answer="C'est simple ! Contactez-nous via le formulaire de ce site, par téléphone ou par email. Nous organiserons un entretien pour vous présenter nos services en détail et répondre à toutes vos questions. L'inscription est gratuite et le processus complet prend généralement 2 à 3 jours."
                     />
+                    <x-faq-item
+                        id="owner9"
+                        parent="faqOwners"
+                        question="Comment fonctionne la géolocalisation GPS de ma moto ?"
+                        answer="Dès l'enregistrement de votre moto chez OKAMI, un traceur GPS est installé sur le véhicule. Ce dispositif vous permet de suivre en temps réel la position exacte et la vitesse de votre tricycle depuis votre espace propriétaire sur la plateforme Tricycle App. Vous recevez des alertes automatiques en cas de déplacement hors zone autorisée, ce qui renforce considérablement la sécurité de votre investissement et prévient le vol."
+                    />
                 </div>
             </div>
         </div>

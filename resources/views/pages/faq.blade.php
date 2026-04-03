@@ -89,6 +89,11 @@
                             question="Puis-je confier plusieurs motos à OKAMI ?"
                             answer="Absolument ! De nombreux propriétaires nous confient plusieurs tricycles. Chaque véhicule dispose de son propre contrat, son motard assigné et son suivi individualisé. Plus vous confiez de motos, plus votre potentiel de revenus augmente."
                         />
+                        <x-faq-item
+                            id="own7" parent="faqOwnersFull"
+                            question="Ma moto est-elle protégée par GPS ?"
+                            answer="Oui ! Chaque moto-tricycle confiée à OKAMI est équipée d'un traceur GPS installé dès l'achat. Vous pouvez suivre la position et la vitesse de votre véhicule en temps réel depuis la plateforme Tricycle App. En cas de vol ou de déplacement suspect, vous êtes alerté immédiatement. C'est une garantie de sécurité supplémentaire pour protéger votre investissement."
+                        />
                     </div>
                 </div>
 

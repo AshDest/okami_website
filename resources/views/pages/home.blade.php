@@ -221,6 +221,15 @@
                     </div>
                 </div>
             </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                <div class="advantage-card">
+                    <div class="adv-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                    <div>
+                        <h6>Géolocalisation GPS</h6>
+                        <p>Chaque moto est équipée d'un traceur GPS dès l'achat. Suivez la position et la vitesse en temps réel pour une sécurité maximale.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
