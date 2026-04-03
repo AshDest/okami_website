@@ -45,7 +45,7 @@
                     <div class="info-icon"><i class="bi bi-telephone"></i></div>
                     <div>
                         <h6>Téléphone</h6>
-                        <p><a href="tel:+243XXXXXXXXX">+243 XXX XXX XXX</a></p>
+                        <p><a href="tel:+243829177344">+243 829 177 344</a></p>
                     </div>
                 </div>
 
@@ -71,7 +71,7 @@
                     <div class="d-flex gap-2">
                         <a href="https://facebook.com/okamisarl" target="_blank" rel="noopener" class="btn btn-sm" style="background:var(--primary-light);color:var(--primary);border-radius:50%;width:45px;height:45px;display:flex;align-items:center;justify-content:center;"><i class="bi bi-facebook fs-5"></i></a>
                         <a href="https://linkedin.com/company/okamisarl" target="_blank" rel="noopener" class="btn btn-sm" style="background:var(--primary-light);color:var(--primary);border-radius:50%;width:45px;height:45px;display:flex;align-items:center;justify-content:center;"><i class="bi bi-linkedin fs-5"></i></a>
-                        <a href="https://wa.me/243XXXXXXXXX" target="_blank" rel="noopener" class="btn btn-sm" style="background:#dcfce7;color:#22c55e;border-radius:50%;width:45px;height:45px;display:flex;align-items:center;justify-content:center;"><i class="bi bi-whatsapp fs-5"></i></a>
+                        <a href="https://wa.me/243829177344" target="_blank" rel="noopener" class="btn btn-sm" style="background:#dcfce7;color:#22c55e;border-radius:50%;width:45px;height:45px;display:flex;align-items:center;justify-content:center;"><i class="bi bi-whatsapp fs-5"></i></a>
                     </div>
                 </div>
             </div>
