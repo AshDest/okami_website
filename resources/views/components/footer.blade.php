@@ -8,7 +8,7 @@
                 <div class="social-icons">
                     <a href="https://facebook.com/okamisarl" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                     <a href="https://linkedin.com/company/okamisarl" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                    <a href="https://wa.me/243XXXXXXXXX" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://wa.me/243829177344" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
                 </div>
             </div>
 
@@ -50,9 +50,9 @@
                         </a>
                     </li>
                     <li class="mb-2">
-                        <a href="tel:+243XXXXXXXXX" style="display: flex; align-items: center; gap: 0.5rem;">
+                        <a href="tel:+243829177344" style="display: flex; align-items: center; gap: 0.5rem;">
                             <i class="bi bi-telephone text-accent"></i>
-                            <span>+243 XXX XXX XXX</span>
+                            <span>+243 829 177 344</span>
                         </a>
                     </li>
                     <li class="mb-2">

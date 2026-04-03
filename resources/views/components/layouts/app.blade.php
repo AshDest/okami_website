@@ -39,7 +39,7 @@
         "name": "OKAMI Sarl",
         "description": "Gestion intelligente de flottes de motos-tricycles à Kinshasa, RDC",
         "url": "https://www.okamisarl.org",
-        "telephone": "+243 XXX XXX XXX",
+        "telephone": "+243 829 177 344",
         "email": "contact@okamisarl.org",
         "address": {
             "@@type": "PostalAddress",
@@ -77,7 +77,7 @@
     <x-footer />
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/243XXXXXXXXX" target="_blank" rel="noopener" class="whatsapp-float" title="Nous contacter sur WhatsApp" aria-label="Contacter OKAMI sur WhatsApp">
+    <a href="https://wa.me/243829177344" target="_blank" rel="noopener" class="whatsapp-float" title="Nous contacter sur WhatsApp" aria-label="Contacter OKAMI sur WhatsApp">
         <i class="bi bi-whatsapp"></i>
     </a>
 
