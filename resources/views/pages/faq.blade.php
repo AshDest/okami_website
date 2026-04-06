@@ -140,8 +140,8 @@
                         />
                         <x-faq-item
                             id="svc2" parent="faqServices"
-                            question="Qu'est-ce que le service KWADO ?"
-                            answer="KWADO est notre service dédié à la réparation et l'entretien des pneus des motos-tricycles. Les pneus étant essentiels à la sécurité, nous disposons d'une équipe spécialisée et d'une caisse dédiée. Chaque intervention est enregistrée pour un suivi précis des coûts."
+                            question="Qu'est-ce que le service QUADO ?"
+                            answer="QUADO est notre service dédié à la réparation et l'entretien des pneus des motos-tricycles. Les pneus étant essentiels à la sécurité, nous disposons d'une équipe spécialisée et d'une caisse dédiée. Chaque intervention est enregistrée pour un suivi précis des coûts."
                         />
                         <x-faq-item
                             id="svc3" parent="faqServices"

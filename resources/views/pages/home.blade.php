@@ -112,7 +112,7 @@
             <x-service-card icon="wallet2" title="Paiement des Propriétaires" description="Reversement fiable et ponctuel via M-Pesa, Airtel Money, Orange Money ou cash. Rapports PDF détaillés." :link="route('services').'#paiements'" />
             <x-service-card icon="phone" title="Supervision Digitale" description="Plateforme Tricycle App pour le suivi en temps réel des opérations, rapports et notifications automatiques." :link="route('services').'#digital'" />
             <x-service-card icon="droplet" title="Service de Lavage OKAMI" description="Station de lavage professionnelle pour tricycles internes et externes, avec partage de revenus transparent." :link="route('services').'#lavage'" />
-            <x-service-card icon="gear-wide-connected" title="Service KWADO (Pneumatique)" description="Réparation et entretien de pneus avec suivi de chaque intervention et caisse dédiée au service." :link="route('services').'#kwado'" />
+            <x-service-card icon="gear-wide-connected" title="Service QUADO (Pneumatique)" description="Réparation et entretien de pneus avec suivi de chaque intervention et caisse dédiée au service." :link="route('services').'#quado'" />
             <x-service-card icon="wrench-adjustable" title="Maintenance & Suivi Technique" description="Maintenance préventive et corrective, planification des interventions et fiches techniques complètes." :link="route('services').'#maintenance'" />
             <x-service-card icon="exclamation-triangle" title="Gestion des Accidents" description="Déclaration, évaluation des dommages, devis garage et suivi complet des réparations post-accident." :link="route('services').'#accidents'" />
         </div>

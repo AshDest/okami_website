@@ -36,7 +36,7 @@
                     <li><a href="{{ route('services') }}#paiements">Paiement propriétaires</a></li>
                     <li><a href="{{ route('services') }}#gps">Géolocalisation GPS</a></li>
                     <li><a href="{{ route('services') }}#lavage">Service de lavage</a></li>
-                    <li><a href="{{ route('services') }}#kwado">Service KWADO</a></li>
+                    <li><a href="{{ route('services') }}#quado">Service QUADO</a></li>
                     <li><a href="{{ route('services') }}#maintenance">Maintenance</a></li>
                 </ul>
             </div>
