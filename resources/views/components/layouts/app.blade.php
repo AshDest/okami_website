@@ -29,7 +29,8 @@
     <meta name="twitter:description" content="{{ $metaDescription }}">
 
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset('favicon.ico') }}">
+    <link rel="icon" type="image/png" href="{{ asset('images/logo2.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/logo2.png') }}">
 
     <!-- Schema.org LocalBusiness -->
     <script type="application/ld+json">
