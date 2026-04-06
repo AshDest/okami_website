@@ -54,10 +54,10 @@
     <rect x="4" y="96" width="12" height="50" rx="5" fill="#1e293b"/>
   </g>
 
-  <!-- KWADO label -->
+  <!-- QUADO label -->
   <g transform="translate(60, 360)">
-    <rect width="160" height="55" rx="14" fill="#4f46e5"/>
-    <text x="80" y="28" text-anchor="middle" font-size="22" font-weight="800" fill="#fff" font-family="sans-serif">KWADO</text>
+    <rect width="160" height="55" rx="14" fill="#145d28"/>
+    <text x="80" y="28" text-anchor="middle" font-size="22" font-weight="800" fill="#fff" font-family="sans-serif">QUADO</text>
     <text x="80" y="46" text-anchor="middle" font-size="10" fill="#c7d2fe" font-family="sans-serif">Service Pneumatique</text>
   </g>
 

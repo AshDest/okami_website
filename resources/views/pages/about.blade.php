@@ -180,7 +180,7 @@
                 <div class="timeline-content">
                     <h5 class="text-accent">2025</h5>
                     <h6>Expansion et croissance</h6>
-                    <p class="text-muted mb-0">Extension à 5 zones de Kinshasa, lancement des services de lavage OKAMI et KWADO, plus de 150 motos en gestion.</p>
+                    <p class="text-muted mb-0">Extension à 5 zones de Kinshasa, lancement des services de lavage OKAMI et QUADO, plus de 150 motos en gestion.</p>
                 </div>
             </div>
             <div class="timeline-item" data-aos="fade-up">

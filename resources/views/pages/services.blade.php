@@ -1,6 +1,6 @@
 <x-layouts.app
     title="Nos Services — OKAMI Sarl | Gestion complète de flottes de tricycles"
-    metaDescription="Découvrez les services OKAMI : gestion de flottes, collecte de versements, paiement propriétaires, lavage, KWADO, maintenance et gestion des accidents."
+    metaDescription="Découvrez les services OKAMI : gestion de flottes, collecte de versements, paiement propriétaires, lavage, QUADO, maintenance et gestion des accidents."
 >
 
 {{-- Page Header --}}
@@ -153,28 +153,28 @@
     </div>
 </section>
 
-{{-- Service 6 : KWADO --}}
-<section class="service-detail section-alt" id="kwado">
+{{-- Service 6 : QUADO --}}
+<section class="service-detail section-alt" id="quado">
     <div class="container">
         <div class="row align-items-center g-5">
             <div class="col-lg-6 order-lg-2" data-aos="fade-left">
                 <div class="d-flex align-items-center gap-3 mb-3">
                     <div class="card-icon" style="width:50px;height:50px;"><i class="bi bi-gear-wide-connected"></i></div>
-                    <h2 class="mb-0">Service KWADO — Pneumatique</h2>
+                    <h2 class="mb-0">Service QUADO — Pneumatique</h2>
                 </div>
-                <p>Le service KWADO est dédié à la réparation et l'entretien des pneus des motos-tricycles. Les pneus étant un élément critique pour la sécurité et la productivité des véhicules, nous avons mis en place un service spécialisé avec une caisse dédiée.</p>
+                <p>Le service QUADO est dédié à la réparation et l'entretien des pneus des motos-tricycles. Les pneus étant un élément critique pour la sécurité et la productivité des véhicules, nous avons mis en place un service spécialisé avec une caisse dédiée.</p>
                 <p>Chaque intervention est enregistrée dans le système : type de réparation, coût des pièces, main d'œuvre. Cela permet un suivi précis des dépenses liées aux pneumatiques pour chaque véhicule.</p>
                 <ul class="feature-list">
                     <li>Réparation et remplacement de pneus</li>
                     <li>Entretien préventif des pneumatiques</li>
                     <li>Enregistrement de chaque intervention</li>
-                    <li>Caisse dédiée au service KWADO</li>
+                    <li>Caisse dédiée au service QUADO</li>
                     <li>Suivi des coûts par véhicule</li>
                     <li>Pièces de qualité et techniciens formés</li>
                 </ul>
             </div>
             <div class="col-lg-6 order-lg-1" data-aos="fade-right">
-                <img src="{{ asset('images/illustrations/kwado-tire.svg') }}" alt="Service KWADO pneumatique" class="rounded-4 w-100" loading="lazy">
+                <img src="{{ asset('images/illustrations/kwado-tire.svg') }}" alt="Service QUADO pneumatique" class="rounded-4 w-100" loading="lazy">
             </div>
         </div>
     </div>
