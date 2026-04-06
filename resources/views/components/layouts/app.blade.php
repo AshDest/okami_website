@@ -20,7 +20,7 @@
     <meta property="og:description" content="{{ $metaDescription }}">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:site_name" content="OKAMI Sarl">
-    <meta property="og:image" content="{{ asset('images/og-image.jpg') }}">
+    <meta property="og:image" content="{{ asset('images/logo2.png') }}">
     <meta property="og:locale" content="fr_CD">
 
     <!-- Twitter Card -->
@@ -39,6 +39,7 @@
         "name": "OKAMI Sarl",
         "description": "Gestion intelligente de flottes de motos-tricycles à Kinshasa, RDC",
         "url": "https://www.okamisarl.org",
+        "logo": "{{ asset('images/logo2.png') }}",
         "telephone": "+243 829 177 344",
         "email": "contact@okamisarl.org",
         "address": {
