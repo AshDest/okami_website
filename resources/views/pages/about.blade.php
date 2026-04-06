@@ -25,7 +25,7 @@
                 <h2 class="section-title">Notre Histoire</h2>
                 <p>OKAMI Sarl est née d'un constat simple mais crucial : à Kinshasa, des milliers de motos-tricycles circulent chaque jour pour transporter personnes et marchandises, mais leur gestion reste largement informelle, opaque et source de conflits entre propriétaires et conducteurs.</p>
                 <p>Fondée en 2024, OKAMI a été créée avec l'ambition de professionnaliser ce secteur vital de l'économie congolaise. Notre approche combine une présence terrain solide avec des outils digitaux de pointe pour offrir une transparence sans précédent.</p>
-                <p>Grâce à notre partenaire technologique <strong>New Technology Hub Sarl (NTH)</strong>, nous avons développé la plateforme <strong>Tricycle App</strong>, un outil de gestion qui permet de tracer chaque franc collecté, du motard au propriétaire.</p>
+                <p>Grâce à notre partenaire technologique <strong>LATEM</strong>, nous avons développé la plateforme <strong>Tricycle App</strong>, un outil de gestion qui permet de tracer chaque franc collecté, du motard au propriétaire.</p>
             </div>
             <div class="col-lg-6" data-aos="fade-left">
                 <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=700&q=80" alt="L'histoire d'OKAMI" class="rounded-4 shadow-lg w-100" loading="lazy">
@@ -163,8 +163,8 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
                     <h5 class="text-accent">Mi-2024</h5>
-                    <h6>Partenariat avec NTH Sarl</h6>
-                    <p class="text-muted mb-0">Début du développement de la plateforme Tricycle App avec New Technology Hub Sarl.</p>
+                    <h6>Partenariat avec LATEM</h6>
+                    <p class="text-muted mb-0">Début du développement de la plateforme Tricycle App avec LATEM.</p>
                 </div>
             </div>
             <div class="timeline-item" data-aos="fade-up">
@@ -195,14 +195,14 @@
     </div>
 </section>
 
-{{-- Partenariat NTH Sarl --}}
+{{-- Partenariat LATEM --}}
 <section class="section section-alt">
     <div class="container">
         <div class="row align-items-center g-5">
             <div class="col-lg-6" data-aos="fade-right">
                 <h2 class="section-title">Notre partenaire technologique</h2>
-                <h4 class="text-primary-okami mb-3">New Technology Hub Sarl (NTH)</h4>
-                <p>NTH Sarl est notre partenaire stratégique pour le développement et la maintenance de la plateforme de gestion <strong>Tricycle App</strong>. Cette collaboration nous permet d'offrir à nos clients un outil digital de pointe pour le suivi de leurs opérations.</p>
+                <h4 class="text-primary-okami mb-3">LATEM</h4>
+                <p>LATEM est notre partenaire stratégique pour le développement et la maintenance de la plateforme de gestion <strong>Tricycle App</strong>. Organisation locale basée à Kinshasa, LATEM apporte son expertise technologique pour offrir à nos clients un outil digital de pointe pour le suivi de leurs opérations.</p>
                 <p>Grâce à Tricycle App, accessible sur <strong>tricycle.okamisarl.org</strong>, chaque acteur du réseau OKAMI dispose d'un accès personnalisé :</p>
                 <ul class="list-unstyled">
                     <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Propriétaires</strong> : suivi des versements, rapports financiers, état de la flotte</li>
@@ -215,7 +215,7 @@
                 </a>
             </div>
             <div class="col-lg-6" data-aos="fade-left">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&q=80" alt="Partenariat NTH Sarl" class="rounded-4 shadow-lg w-100" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&q=80" alt="Partenariat LATEM" class="rounded-4 shadow-lg w-100" loading="lazy">
             </div>
         </div>
     </div>

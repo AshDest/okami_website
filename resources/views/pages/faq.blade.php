@@ -40,7 +40,7 @@
                         <x-faq-item
                             id="gen3" parent="faqGeneral"
                             question="Qu'est-ce que la plateforme Tricycle App ?"
-                            answer="Tricycle App est notre plateforme digitale de gestion, développée en partenariat avec New Technology Hub Sarl (NTH). Accessible sur <a href='https://tricycle.okamisarl.org' target='_blank'>tricycle.okamisarl.org</a>, elle permet aux propriétaires, motards et superviseurs de suivre les opérations en temps réel : versements, paiements, rapports financiers et état de la flotte."
+                            answer="Tricycle App est notre plateforme digitale de gestion, développée en partenariat avec LATEM. Accessible sur <a href='https://tricycle.okamisarl.org' target='_blank'>tricycle.okamisarl.org</a>, elle permet aux propriétaires, motards et superviseurs de suivre les opérations en temps réel : versements, paiements, rapports financiers et état de la flotte."
                         />
                         <x-faq-item
                             id="gen4" parent="faqGeneral"
@@ -151,7 +151,7 @@
                         <x-faq-item
                             id="svc4" parent="faqServices"
                             question="Proposez-vous des services Mobile Money ?"
-                            answer="Oui, OKAMI gère également des transactions Mobile Money (envoi et retrait). Les commissions sont réparties entre NTH Sarl (70%) et OKAMI (30%). Ce service complémentaire s'inscrit dans notre volonté de diversifier nos activités tout en servant notre communauté."
+                            answer="Oui, OKAMI gère également des transactions Mobile Money (envoi et retrait). Les commissions sont réparties entre LATEM (70%) et OKAMI (30%). Ce service complémentaire s'inscrit dans notre volonté de diversifier nos activités tout en servant notre communauté."
                         />
                         <x-faq-item
                             id="svc5" parent="faqServices"

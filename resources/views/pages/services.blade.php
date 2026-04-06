@@ -108,7 +108,7 @@
                     <div class="card-icon" style="width:50px;height:50px;"><i class="bi bi-phone"></i></div>
                     <h2 class="mb-0">Supervision Digitale — Tricycle App</h2>
                 </div>
-                <p>Développée en partenariat avec NTH Sarl, la plateforme Tricycle App est le cœur technologique d'OKAMI. Accessible sur <strong>tricycle.okamisarl.org</strong>, elle offre un tableau de bord complet pour chaque rôle dans notre réseau.</p>
+                <p>Développée en partenariat avec LATEM, la plateforme Tricycle App est le cœur technologique d'OKAMI. Accessible sur <strong>tricycle.okamisarl.org</strong>, elle offre un tableau de bord complet pour chaque rôle dans notre réseau.</p>
                 <p>Chaque acteur dispose d'un accès personnalisé avec des fonctionnalités adaptées à son rôle. Les propriétaires peuvent suivre leurs versements, les motards consulter leur historique, et les superviseurs gérer les opérations quotidiennes.</p>
                 <ul class="feature-list">
                     <li>Tableau de bord personnalisé par rôle</li>
