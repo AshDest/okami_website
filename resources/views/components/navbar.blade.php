@@ -3,7 +3,7 @@
 <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-okami fixed-top {{ $transparent ? '' : 'navbar-opaque' }}">
     <div class="container">
         <a class="navbar-brand" href="{{ route('home') }}">
-            <i class="bi bi-truck"></i> OKAMI<span class="brand-accent">.</span>
+            <img src="{{ asset('images/logo2.png') }}" alt="OKAMI Sarl" class="navbar-logo" style="height: 60px; max-height: 60px; width: auto; object-fit: contain;">
         </a>
 
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,4 +40,3 @@
         </div>
     </div>
 </nav>
-

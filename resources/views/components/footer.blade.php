@@ -3,7 +3,9 @@
         <div class="row g-4">
             {{-- Colonne 1 : Logo + Description --}}
             <div class="col-lg-3 col-md-6">
-                <h5><i class="bi bi-truck"></i> OKAMI<span class="text-accent">.</span></h5>
+                <a href="{{ route('home') }}">
+                    <img src="{{ asset('images/logo2.png') }}" alt="OKAMI Sarl" class="footer-logo mb-3" style="height: 60px; max-height: 60px; width: auto; object-fit: contain;">
+                </a>
                 <p>OKAMI Sarl est votre partenaire de confiance pour la gestion intelligente et transparente de flottes de motos-tricycles à Kinshasa.</p>
                 <div class="social-icons">
                     <a href="https://facebook.com/okamisarl" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
