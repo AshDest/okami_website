@@ -181,7 +181,7 @@
                     <div class="adv-icon"><i class="bi bi-cpu"></i></div>
                     <div>
                         <h6>Technologie de pointe</h6>
-                        <p>Notre plateforme Tricycle App développée par NTH Sarl offre un suivi digital complet de vos opérations.</p>
+                        <p>Notre plateforme Tricycle App développée par LATEM offre un suivi digital complet de vos opérations.</p>
                     </div>
                 </div>
             </div>
@@ -334,8 +334,8 @@
                 <div class="partner-logo">
                     <div class="text-center">
                         <i class="bi bi-cpu fs-1 text-primary-okami"></i>
-                        <h6 class="mt-2 mb-0 fw-bold">NTH Sarl</h6>
-                        <small class="text-muted">New Technology Hub</small>
+                        <h6 class="mt-2 mb-0 fw-bold">LATEM</h6>
+                        <small class="text-muted">Partenaire technologique</small>
                     </div>
                 </div>
             </div>

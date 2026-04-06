@@ -80,7 +80,7 @@
         <div class="container">
             <p class="mb-0">
                 &copy; {{ date('Y') }} OKAMI Sarl. Tous droits réservés. |
-                Développé par <a href="https://tricycle.okamisarl.org" target="_blank" rel="noopener">New Technology Hub Sarl</a>
+                Développé par <a href="https://tricycle.okamisarl.org" target="_blank" rel="noopener">LATEM</a>
             </p>
         </div>
     </div>
