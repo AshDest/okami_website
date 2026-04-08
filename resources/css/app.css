@@ -1347,3 +1347,188 @@ img {
     align-items: center;
     gap: 0.5rem;
 }
+
+/* ========== Réalisations Cards ========== */
+.realisation-card {
+    border-radius: var(--radius-lg) !important;
+    overflow: hidden;
+    transition: var(--transition);
+    cursor: default;
+}
+
+.realisation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg) !important;
+}
+
+.realisation-card-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+}
+
+.realisation-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.realisation-card:hover .realisation-card-img {
+    transform: scale(1.05);
+}
+
+.realisation-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.3rem 0.75rem;
+    border-radius: 50px;
+    text-transform: capitalize;
+}
+
+.realisation-media-count {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.25rem 0.6rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.realisation-card .card-title {
+    font-size: 1.05rem;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.realisation-card .card-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.btn-outline-primary-okami {
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    background: transparent;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.75rem;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.btn-outline-primary-okami:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+/* Badge primary OKAMI */
+.badge.bg-primary-okami {
+    background: var(--primary) !important;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 0.35rem 0.75rem;
+}
+
+/* ========== Réalisations Filters ========== */
+.realisations-filters {
+    background: #fff;
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.realisations-filters .form-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+/* ========== Pagination Okami ========== */
+.pagination .page-link {
+    color: var(--primary);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius) !important;
+    margin: 0 0.2rem;
+    font-weight: 500;
+    padding: 0.5rem 0.85rem;
+    transition: var(--transition);
+}
+
+.pagination .page-item.active .page-link {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+}
+
+.pagination .page-link:hover {
+    background: var(--primary-light);
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.pagination .page-item.disabled .page-link {
+    color: var(--text-muted);
+    background: transparent;
+}
+
+/* ========== Modal Réalisation ========== */
+#realisationModal .modal-content {
+    border: none;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+#realisationModal .modal-header {
+    padding: 1.25rem 1.5rem;
+}
+
+#realisationModal .modal-body {
+    padding: 0 1.5rem 1.5rem;
+}
+
+#realisationModal .modal-body img {
+    border-radius: var(--radius);
+}
+
+#realisationModal .carousel-control-prev-icon,
+#realisationModal .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+/* Placeholder réalisation */
+.realisation-card-img-wrapper img[src*="placeholder"] {
+    background: var(--primary-light);
+    padding: 2rem;
+    object-fit: contain;
+}
+
