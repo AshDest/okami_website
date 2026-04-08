@@ -23,6 +23,7 @@
                     <li><a href="{{ route('services') }}">Services</a></li>
                     <li><a href="{{ route('owners') }}">Propriétaires</a></li>
                     <li><a href="{{ route('drivers') }}">Motards</a></li>
+                    <li><a href="{{ route('realisations') }}">Réalisations</a></li>
                     <li><a href="{{ route('contact') }}">Contact</a></li>
                 </ul>
             </div>

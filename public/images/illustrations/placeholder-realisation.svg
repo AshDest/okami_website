@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#e8f5ec"/>
+  <g transform="translate(200,130)" fill="#145d28" opacity="0.3">
+    <rect x="-60" y="-40" width="50" height="40" rx="4"/>
+    <rect x="-5" y="-55" width="65" height="55" rx="4"/>
+    <circle cx="-35" cy="15" r="8"/>
+    <circle cx="27" cy="15" r="8"/>
+  </g>
+  <text x="200" y="185" text-anchor="middle" fill="#145d28" font-family="Inter,sans-serif" font-size="14" font-weight="600" opacity="0.5">OKAMI Sarl</text>
+  <text x="200" y="205" text-anchor="middle" fill="#145d28" font-family="Inter,sans-serif" font-size="11" opacity="0.4">Image non disponible</text>
+</svg>

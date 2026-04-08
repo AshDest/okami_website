@@ -322,6 +322,40 @@
     </div>
 </section>
 
+{{-- ============ NOS RÉALISATIONS ============ --}}
+<section class="section section-alt">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title section-title-center">Nos Réalisations</h2>
+            <p class="section-subtitle mx-auto">Découvrez nos dernières activités, événements et projets sur le terrain</p>
+        </div>
+
+        {{-- Loading state --}}
+        <div id="realisations-loading" class="text-center py-5">
+            <div class="spinner-border text-primary" role="status" style="color: var(--primary) !important;">
+                <span class="visually-hidden">Chargement...</span>
+            </div>
+            <p class="text-muted mt-3">Chargement des réalisations...</p>
+        </div>
+
+        {{-- Grid dynamique --}}
+        <div id="realisations-home-grid" class="row g-4" style="display: none;"></div>
+
+        {{-- Message si aucune donnée --}}
+        <div id="realisations-empty" class="text-center py-5" style="display: none;">
+            <i class="bi bi-images fs-1 text-muted"></i>
+            <p class="text-muted mt-3">Aucune réalisation disponible pour le moment.</p>
+        </div>
+
+        {{-- Bouton voir plus --}}
+        <div id="realisations-home-cta" class="text-center mt-4" style="display: none;">
+            <a href="{{ route('realisations') }}" class="btn btn-primary-okami">
+                <i class="bi bi-grid-3x3-gap"></i> Voir toutes nos réalisations
+            </a>
+        </div>
+    </div>
+</section>
+
 {{-- ============ NOS PARTENAIRES ============ --}}
 <section class="section">
     <div class="container">
