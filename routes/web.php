@@ -9,4 +9,5 @@ Route::get('/proprietaires', fn () => view('pages.owners'))->name('owners');
 Route::get('/motards', fn () => view('pages.drivers'))->name('drivers');
 Route::get('/contact', fn () => view('pages.contact'))->name('contact');
 Route::get('/realisations', fn () => view('pages.realisations'))->name('realisations');
+Route::get('/realisations/{id}', fn ($id) => view('pages.realisation-detail', ['id' => $id]))->name('realisation.detail');
 Route::get('/faq', fn () => view('pages.faq'))->name('faq');
