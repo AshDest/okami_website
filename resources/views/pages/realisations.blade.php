@@ -17,7 +17,7 @@
     </div>
 </section>
 
-{{-- ============ FILTRES & RECHERCHE ============ --}}
+{{-- ============ FILTRES & CONTENU ============ --}}
 <section class="section">
     <div class="container">
 
@@ -51,7 +51,7 @@
                     <input type="date" id="filtre-date-to" class="form-control">
                 </div>
                 <div class="col-lg-1 col-md-4">
-                    <button id="btn-reset-filters" class="btn btn-outline-secondary w-100" title="Réinitialiser">
+                    <button id="btn-reset-filters" class="btn btn-outline-secondary w-100" title="Réinitialiser les filtres">
                         <i class="bi bi-arrow-counterclockwise"></i>
                     </button>
                 </div>
@@ -81,15 +81,14 @@
             <i class="bi bi-search fs-1 text-muted"></i>
             <h5 class="mt-3">Aucune réalisation trouvée</h5>
             <p class="text-muted">Essayez de modifier vos critères de recherche ou de supprimer les filtres.</p>
-            <button class="btn btn-primary-okami" onclick="resetFilters()">
+            <button class="btn btn-primary-okami" onclick="window.resetFilters()">
                 <i class="bi bi-arrow-counterclockwise"></i> Réinitialiser les filtres
             </button>
         </div>
 
         {{-- Pagination --}}
         <nav id="realisations-pagination" class="mt-5" style="display: none;" aria-label="Pagination des réalisations">
-            <ul class="pagination justify-content-center" id="pagination-list">
-            </ul>
+            <ul class="pagination justify-content-center" id="pagination-list"></ul>
         </nav>
 
     </div>
