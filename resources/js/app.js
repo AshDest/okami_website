@@ -7,8 +7,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 // ========== API Réalisations ==========
-// En local (.env) : VITE_API_URL=http://127.0.0.1:8001/api/v1
-// En production (.env) : VITE_API_URL=https://tricycle.okamisarl.org/api/v1
 const API_BASE = import.meta.env.VITE_API_URL || 'https://tricycle.okamisarl.org/api/v1';
 
 const realisationsApi = {
@@ -22,7 +20,7 @@ const realisationsApi = {
         fetch(`${API_BASE}/realisations/${id}`).then(r => r.json()),
 };
 
-// Créer une card réalisation
+// Créer une card réalisation — le bouton redirige vers la page détail
 function createRealisationCard(item, colClass = 'col-lg-4 col-md-6') {
     const coverUrl = item.cover_image?.thumbnail || item.cover_image?.url || '/images/illustrations/placeholder-realisation.svg';
     const description = item.description ? (item.description.length > 140 ? item.description.substring(0, 140) + '...' : item.description) : '';
@@ -33,7 +31,7 @@ function createRealisationCard(item, colClass = 'col-lg-4 col-md-6') {
     return `
         <div class="${colClass}" data-aos="fade-up">
             <div class="card realisation-card h-100 shadow-sm border-0">
-                <div class="realisation-card-img-wrapper">
+                <a href="/realisations/${item.id}" class="realisation-card-img-wrapper">
                     <img src="${coverUrl}"
                          class="card-img-top realisation-card-img"
                          alt="${item.titre || 'Réalisation OKAMI'}"
@@ -41,18 +39,20 @@ function createRealisationCard(item, colClass = 'col-lg-4 col-md-6') {
                          onerror="this.src='/images/illustrations/placeholder-realisation.svg';">
                     ${badge ? `<span class="realisation-badge">${badge}</span>` : ''}
                     ${item.media_count > 1 ? `<span class="realisation-media-count"><i class="bi bi-images"></i> ${item.media_count}</span>` : ''}
-                </div>
+                </a>
                 <div class="card-body d-flex flex-column">
-                    <h5 class="card-title fw-bold mb-2">${item.titre || 'Sans titre'}</h5>
+                    <a href="/realisations/${item.id}" class="text-decoration-none">
+                        <h5 class="card-title fw-bold mb-2 text-dark">${item.titre || 'Sans titre'}</h5>
+                    </a>
                     <p class="card-text text-muted flex-grow-1">${description}</p>
                     <div class="d-flex justify-content-between align-items-center mt-3">
                         <small class="text-muted">
                             <i class="bi bi-calendar3"></i> ${date}
                             ${lieu ? ` — <i class="bi bi-geo-alt"></i> ${lieu}` : ''}
                         </small>
-                        <button class="btn btn-sm btn-outline-primary-okami btn-voir-detail" data-id="${item.id}">
+                        <a href="/realisations/${item.id}" class="btn btn-sm btn-outline-primary-okami">
                             Voir <i class="bi bi-arrow-right"></i>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -85,7 +85,6 @@ async function chargerRealisationsHome() {
         cta.style.display = 'block';
 
         AOS.refresh();
-        attachDetailEvents(grid);
     } catch (err) {
         console.error('Erreur chargement réalisations:', err);
         loading.style.display = 'none';
@@ -149,7 +148,6 @@ async function chargerRealisationsPage(page = 1) {
         }
 
         AOS.refresh();
-        attachDetailEvents(grid);
     } catch (err) {
         console.error('Erreur chargement réalisations page:', err);
         loading.style.display = 'none';
@@ -286,72 +284,256 @@ window.resetFilters = function () {
     chargerRealisationsPage(1);
 };
 
-// ========== Modal Détail ==========
-function attachDetailEvents(container) {
-    container.querySelectorAll('.btn-voir-detail').forEach(btn => {
-        btn.addEventListener('click', async () => {
-            const id = btn.dataset.id;
-            const modalEl = document.getElementById('realisationModal');
-            if (!modalEl) return;
-            const modal = new bootstrap.Modal(modalEl);
-            const modalBody = document.getElementById('realisationModalBody');
-            const modalTitle = document.getElementById('realisationModalLabel');
+// ========== Page Détail Réalisation ==========
+let lightboxMediaList = [];
+let lightboxCurrentIndex = 0;
 
-            modalBody.innerHTML = `<div class="text-center py-4">
-                <div class="spinner-border" role="status" style="color: var(--primary);"><span class="visually-hidden">Chargement...</span></div>
-            </div>`;
-            modal.show();
+async function chargerDetailRealisation() {
+    const pageEl = document.getElementById('realisation-detail-page');
+    if (!pageEl) return;
 
-            try {
-                const result = await realisationsApi.detail(id);
-                const item = result.data || result;
+    const id = pageEl.dataset.realisationId;
+    const loadingEl = document.getElementById('detail-loading');
+    const errorEl = document.getElementById('detail-error');
+    const contentEl = document.getElementById('detail-content');
 
-                modalTitle.textContent = item.titre || 'Réalisation';
+    try {
+        const result = await realisationsApi.detail(id);
+        const item = result.data || result;
 
-                let mediaHtml = '';
-                if (item.media && item.media.length > 0) {
-                    if (item.media.length === 1) {
-                        mediaHtml = `<img src="${item.media[0].url}" class="w-100 rounded mb-3" alt="${item.titre}" loading="lazy">`;
-                    } else {
-                        mediaHtml = `
-                            <div id="detailCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    ${item.media.map((m, i) => `
-                                        <div class="carousel-item ${i === 0 ? 'active' : ''}">
-                                            <img src="${m.url}" class="d-block w-100 rounded" alt="${item.titre} - ${i + 1}" loading="lazy">
-                                        </div>
-                                    `).join('')}
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#detailCarousel" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#detailCarousel" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                </button>
-                            </div>`;
-                    }
-                } else if (item.cover_image) {
-                    mediaHtml = `<img src="${item.cover_image.url}" class="w-100 rounded mb-3" alt="${item.titre}" loading="lazy">`;
+        if (!item || !item.id) {
+            loadingEl.style.display = 'none';
+            errorEl.style.display = 'block';
+            return;
+        }
+
+        // Mettre à jour le titre dans le header
+        document.getElementById('detail-titre').textContent = item.titre || 'Réalisation';
+        document.getElementById('detail-breadcrumb').textContent = item.titre || 'Détail';
+        document.title = `${item.titre} — OKAMI Sarl`;
+
+        // Mettre à jour les meta du header
+        const metaHeader = document.getElementById('detail-meta-header');
+        const metaParts = [];
+        if (item.categorie_label) metaParts.push(item.categorie_label);
+        if (item.date_realisation_formatted) metaParts.push(item.date_realisation_formatted);
+        if (item.lieu) metaParts.push(item.lieu);
+        metaHeader.textContent = metaParts.join(' • ');
+
+        // ===== Médias =====
+        const allMedia = item.media || [];
+        if (item.cover_image && !allMedia.find(m => m.url === item.cover_image.url)) {
+            allMedia.unshift(item.cover_image);
+        }
+
+        // Séparer images et vidéos
+        const images = allMedia.filter(m => m.type === 'image' || !m.type);
+        const videos = allMedia.filter(m => m.type === 'video');
+        lightboxMediaList = allMedia;
+
+        // Média principal
+        const mainMediaEl = document.getElementById('detail-main-media');
+        if (allMedia.length > 0) {
+            const first = allMedia[0];
+            if (first.type === 'video') {
+                mainMediaEl.innerHTML = `
+                    <video controls class="detail-main-video w-100 rounded-4" poster="${first.thumbnail || ''}">
+                        <source src="${first.url}" type="video/mp4">
+                        Votre navigateur ne supporte pas la lecture vidéo.
+                    </video>`;
+            } else {
+                mainMediaEl.innerHTML = `
+                    <img src="${first.url}" alt="${item.titre}" class="detail-main-img w-100 rounded-4 cursor-zoom"
+                         id="main-media-img" data-index="0" loading="lazy"
+                         onerror="this.src='/images/illustrations/placeholder-realisation.svg';">`;
+            }
+        } else {
+            mainMediaEl.innerHTML = `
+                <img src="/images/illustrations/placeholder-realisation.svg" alt="Aucun média" class="w-100 rounded-4">`;
+        }
+
+        // Galerie miniatures (si plus d'un média)
+        const galleryEl = document.getElementById('detail-gallery');
+        if (allMedia.length > 1) {
+            let galleryHtml = '<div class="detail-gallery-grid">';
+            allMedia.forEach((m, i) => {
+                if (m.type === 'video') {
+                    galleryHtml += `
+                        <div class="detail-gallery-item ${i === 0 ? 'active' : ''}" data-index="${i}" data-type="video">
+                            <div class="detail-gallery-video-overlay">
+                                <i class="bi bi-play-circle-fill"></i>
+                            </div>
+                            <img src="${m.thumbnail || '/images/illustrations/placeholder-realisation.svg'}"
+                                 alt="Vidéo ${i + 1}" loading="lazy">
+                        </div>`;
+                } else {
+                    galleryHtml += `
+                        <div class="detail-gallery-item ${i === 0 ? 'active' : ''}" data-index="${i}" data-type="image">
+                            <img src="${m.thumbnail || m.url}" alt="Photo ${i + 1}" loading="lazy"
+                                 onerror="this.src='/images/illustrations/placeholder-realisation.svg';">
+                        </div>`;
                 }
+            });
+            galleryHtml += '</div>';
+            galleryEl.innerHTML = galleryHtml;
 
-                modalBody.innerHTML = `
-                    ${mediaHtml}
-                    <div class="d-flex flex-wrap gap-2 mb-3">
-                        ${item.categorie_label ? `<span class="badge" style="background:var(--primary);color:#fff;">${item.categorie_label}</span>` : ''}
-                        ${item.date_realisation_formatted ? `<span class="badge bg-light text-dark border"><i class="bi bi-calendar3"></i> ${item.date_realisation_formatted}</span>` : ''}
-                        ${item.lieu ? `<span class="badge bg-light text-dark border"><i class="bi bi-geo-alt"></i> ${item.lieu}</span>` : ''}
+            // Click sur miniature → changer le média principal
+            galleryEl.querySelectorAll('.detail-gallery-item').forEach(thumb => {
+                thumb.addEventListener('click', () => {
+                    const idx = parseInt(thumb.dataset.index);
+                    const type = thumb.dataset.type;
+                    const media = allMedia[idx];
+
+                    // Mettre à jour l'état actif
+                    galleryEl.querySelectorAll('.detail-gallery-item').forEach(t => t.classList.remove('active'));
+                    thumb.classList.add('active');
+
+                    if (type === 'video') {
+                        mainMediaEl.innerHTML = `
+                            <video controls autoplay class="detail-main-video w-100 rounded-4" poster="${media.thumbnail || ''}">
+                                <source src="${media.url}" type="video/mp4">
+                            </video>`;
+                    } else {
+                        mainMediaEl.innerHTML = `
+                            <img src="${media.url}" alt="${item.titre}" class="detail-main-img w-100 rounded-4 cursor-zoom"
+                                 id="main-media-img" data-index="${idx}" loading="lazy">`;
+                        // Re-attacher l'event lightbox
+                        const img = mainMediaEl.querySelector('#main-media-img');
+                        if (img) img.addEventListener('click', () => openLightbox(idx));
+                    }
+                });
+            });
+        }
+
+        // Lightbox sur image principale
+        const mainImg = document.getElementById('main-media-img');
+        if (mainImg) {
+            mainImg.addEventListener('click', () => openLightbox(0));
+        }
+
+        // Description
+        const descEl = document.getElementById('detail-description');
+        descEl.innerHTML = item.description
+            ? `<p style="white-space: pre-line; line-height: 1.9;">${item.description}</p>`
+            : '<p class="text-muted fst-italic">Aucune description disponible.</p>';
+
+        // Infos latérales
+        const infoList = document.getElementById('detail-info-list');
+        let infoHtml = '';
+        if (item.categorie_label) {
+            infoHtml += `<li><span class="detail-info-label"><i class="bi bi-tag"></i> Catégorie</span>
+                <span class="badge" style="background: var(--primary); color: #fff;">${item.categorie_label}</span></li>`;
+        }
+        if (item.date_realisation_formatted) {
+            infoHtml += `<li><span class="detail-info-label"><i class="bi bi-calendar3"></i> Date</span>
+                <span class="detail-info-value">${item.date_realisation_formatted}</span></li>`;
+        }
+        if (item.lieu) {
+            infoHtml += `<li><span class="detail-info-label"><i class="bi bi-geo-alt"></i> Lieu</span>
+                <span class="detail-info-value">${item.lieu}</span></li>`;
+        }
+        if (allMedia.length > 0) {
+            infoHtml += `<li><span class="detail-info-label"><i class="bi bi-images"></i> Médias</span>
+                <span class="detail-info-value">${images.length} photo(s)${videos.length > 0 ? `, ${videos.length} vidéo(s)` : ''}</span></li>`;
+        }
+        infoList.innerHTML = infoHtml;
+
+        // Stats médias
+        if (allMedia.length > 1) {
+            const statsCard = document.getElementById('detail-media-stats-card');
+            const statsEl = document.getElementById('detail-media-stats');
+            statsCard.style.display = 'block';
+
+            let statsHtml = '<div class="row g-2">';
+            if (images.length > 0) {
+                statsHtml += `<div class="col-6">
+                    <div class="detail-stat-box">
+                        <i class="bi bi-camera fs-4 text-primary-okami"></i>
+                        <div class="fw-bold">${images.length}</div>
+                        <small class="text-muted">Photo${images.length > 1 ? 's' : ''}</small>
                     </div>
-                    <p class="mb-0" style="white-space: pre-line; line-height: 1.8;">${item.description || 'Aucune description disponible.'}</p>
-                `;
-            } catch (err) {
-                console.error('Erreur chargement détail:', err);
-                modalBody.innerHTML = `<div class="text-center py-4">
-                    <i class="bi bi-exclamation-triangle fs-1 text-danger"></i>
-                    <p class="text-muted mt-3">Impossible de charger les détails de cette réalisation.</p>
                 </div>`;
             }
-        });
-    });
+            if (videos.length > 0) {
+                statsHtml += `<div class="col-6">
+                    <div class="detail-stat-box">
+                        <i class="bi bi-camera-video fs-4 text-primary-okami"></i>
+                        <div class="fw-bold">${videos.length}</div>
+                        <small class="text-muted">Vidéo${videos.length > 1 ? 's' : ''}</small>
+                    </div>
+                </div>`;
+            }
+            statsHtml += '</div>';
+            statsEl.innerHTML = statsHtml;
+        }
+
+        // Afficher le contenu
+        loadingEl.style.display = 'none';
+        contentEl.style.display = 'block';
+        AOS.refresh();
+
+    } catch (err) {
+        console.error('Erreur chargement détail réalisation:', err);
+        loadingEl.style.display = 'none';
+        errorEl.style.display = 'block';
+    }
+}
+
+// ========== Lightbox ==========
+function openLightbox(index) {
+    if (lightboxMediaList.length === 0) return;
+    // Ne pas ouvrir la lightbox pour les vidéos
+    const media = lightboxMediaList[index];
+    if (media && media.type === 'video') return;
+
+    lightboxCurrentIndex = index;
+    updateLightboxContent();
+
+    const modalEl = document.getElementById('lightboxModal');
+    if (modalEl) {
+        const modal = new bootstrap.Modal(modalEl);
+        modal.show();
+    }
+}
+
+function updateLightboxContent() {
+    const contentEl = document.getElementById('lightbox-content');
+    const counterEl = document.getElementById('lightbox-counter');
+    const media = lightboxMediaList[lightboxCurrentIndex];
+
+    // Compter seulement les images pour le compteur
+    const imageOnly = lightboxMediaList.filter(m => m.type !== 'video');
+    const imageIndex = imageOnly.indexOf(media);
+
+    if (media.type === 'video') {
+        contentEl.innerHTML = `
+            <video controls autoplay class="lightbox-media">
+                <source src="${media.url}" type="video/mp4">
+            </video>`;
+    } else {
+        contentEl.innerHTML = `
+            <img src="${media.url}" alt="Photo" class="lightbox-media" loading="lazy">`;
+    }
+
+    counterEl.textContent = `${imageIndex + 1} / ${imageOnly.length}`;
+}
+
+function lightboxNavigate(direction) {
+    // Naviguer seulement entre les images
+    const imageIndices = lightboxMediaList
+        .map((m, i) => (m.type !== 'video' ? i : -1))
+        .filter(i => i !== -1);
+
+    if (imageIndices.length === 0) return;
+
+    const currentImagePos = imageIndices.indexOf(lightboxCurrentIndex);
+    let newPos = currentImagePos + direction;
+
+    if (newPos < 0) newPos = imageIndices.length - 1;
+    if (newPos >= imageIndices.length) newPos = 0;
+
+    lightboxCurrentIndex = imageIndices[newPos];
+    updateLightboxContent();
 }
 
 // ========== DOMContentLoaded ==========
@@ -382,13 +564,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const backToTop = document.getElementById('backToTop');
     if (backToTop) {
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
+            backToTop.classList.toggle('show', window.scrollY > 300);
         });
-
         backToTop.addEventListener('click', (e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -396,7 +573,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Compteurs animés
-    const observerOptions = { threshold: 0.5 };
     const counterObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -405,7 +581,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const duration = 2000;
                 const increment = target / (duration / 16);
                 let current = 0;
-
                 const updateCounter = () => {
                     current += increment;
                     if (current < target) {
@@ -419,13 +594,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 counterObserver.unobserve(counter);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.5 });
 
-    document.querySelectorAll('.counter-value').forEach(el => {
-        counterObserver.observe(el);
-    });
+    document.querySelectorAll('.counter-value').forEach(el => counterObserver.observe(el));
 
-    // Smooth scroll pour les liens d'ancrage
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const target = document.querySelector(this.getAttribute('href'));
@@ -437,13 +610,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ========== Réalisations ==========
-    // Page d'accueil : charger les dernières
     chargerRealisationsHome();
 
-    // Page /realisations : filtres + liste paginée
     if (document.getElementById('realisations-page-grid')) {
         chargerFiltresCategories();
         initFiltresPage();
         chargerRealisationsPage(1);
     }
+
+    // Page détail
+    chargerDetailRealisation();
+
+    // Lightbox navigation
+    const prevBtn = document.getElementById('lightbox-prev');
+    const nextBtn = document.getElementById('lightbox-next');
+    if (prevBtn) prevBtn.addEventListener('click', () => lightboxNavigate(-1));
+    if (nextBtn) nextBtn.addEventListener('click', () => lightboxNavigate(1));
+
+    // Navigation clavier lightbox
+    document.addEventListener('keydown', (e) => {
+        const modalEl = document.getElementById('lightboxModal');
+        if (!modalEl || !modalEl.classList.contains('show')) return;
+        if (e.key === 'ArrowLeft') lightboxNavigate(-1);
+        if (e.key === 'ArrowRight') lightboxNavigate(1);
+    });
 });

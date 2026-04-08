@@ -105,24 +105,6 @@
     </div>
 </section>
 
-{{-- ============ MODAL DÉTAIL ============ --}}
-<div class="modal fade" id="realisationModal" tabindex="-1" aria-labelledby="realisationModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header border-0">
-                <h5 class="modal-title fw-bold" id="realisationModalLabel">Détail</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-            </div>
-            <div class="modal-body" id="realisationModalBody">
-                <div class="text-center py-4">
-                    <div class="spinner-border" role="status" style="color: var(--primary);">
-                        <span class="visually-hidden">Chargement...</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 </x-layouts.app>
 
